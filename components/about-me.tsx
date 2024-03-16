@@ -41,7 +41,32 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-        <div className="bg-[#C9ADA7] p-10 rounded-2xl"></div>
+        <div className="bg-[#C9ADA7] p-10 rounded-2xl">
+          <h3 className="text-3xl text-center">Skills</h3>
+          <ul className="mt-3 pt-3 flex flex-col gap-3 items-center border-t-2 border-dashed">
+            <li>
+              <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
+            </li>
+            <li>
+              <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" />
+            </li>
+            <li>
+              <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+            </li>
+            <li>
+              <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
+            </li>
+            <li>
+              <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+            </li>
+            <li>
+              <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+            </li>
+            <li>
+              <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" />
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
