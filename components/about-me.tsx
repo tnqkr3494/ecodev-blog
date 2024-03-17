@@ -11,11 +11,11 @@ export default function AboutMe() {
     >
       <h1 className="text-6xl text-[#F2E9E4] mb-20 font-semibold">About Me</h1>
       <div className="flex flex-wrap gap-2  text-[#F2E9E4] text-xl leading-8 ">
-        <div className="max-w-4xl bg-[#efc0b3] p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">
+        <div className="max-w-4xl bg-[#9f86c0] p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">
           <p className="pr-8">
             Hello✋ I am a front-end engineer who is working under the nickname{" "}
             <span>EcoDev</span>.I am studying while dreaming of becoming a{" "}
-            <span className="text-[#4A4E69] font-semibold">
+            <span className="text-[#FFC8DD] font-semibold">
               full-stack developer
             </span>{" "}
             in the future.
@@ -42,7 +42,7 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-        <div className="bg-[#efc0b3] p-10 rounded-2xl shadow-xl w-72">
+        <div className="bg-[#9f86c0] p-10 rounded-2xl shadow-xl w-72">
           <h3 className="text-4xl text-center font-semibold">Skills</h3>
           <ul className="mt-3 pt-3 flex flex-col gap-3 items-center border-t-2 border-dashed">
             <li>
@@ -69,7 +69,7 @@ export default function AboutMe() {
           </ul>
         </div>
       </div>
-      <div className="mt-10 bg-[#efc0b3] w-[74rem] h-96 rounded-xl">hello</div>
+      <div className="mt-10 bg-[#9f86c0] w-[74rem] h-96 rounded-xl shadow-xl"></div>
     </div>
   );
 }
