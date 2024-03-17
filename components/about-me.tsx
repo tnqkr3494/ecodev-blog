@@ -1,16 +1,20 @@
 import Image from "next/image";
 import avatar from "../img/kang.png";
 import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
+import styles from "../styles/cross-effect.module.css";
 
 export default function AboutMe() {
   return (
-    <div id="about" className="pb-96  pl-20">
+    <div
+      id="about"
+      className={`${styles.container} pt-32 pb-60 pl-20 bg-[#be95c4] w-full`}
+    >
       <h1 className="text-6xl text-[#F2E9E4] mb-20 font-semibold">About Me</h1>
-      <div className="grid grid-cols-5 gap-2  text-[#F2E9E4] text-xl leading-8 ">
-        <div className="bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4] p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">
+      <div className="flex flex-wrap gap-2  text-[#F2E9E4] text-xl leading-8 ">
+        <div className="max-w-4xl bg-[#efc0b3] p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">
           <p className="pr-8">
-            Hello✋ I am a front-end engineer who is working under the nickname
-            ecodev.I am studying while dreaming of becoming a{" "}
+            Hello✋ I am a front-end engineer who is working under the nickname{" "}
+            <span>EcoDev</span>.I am studying while dreaming of becoming a{" "}
             <span className="text-[#4A4E69] font-semibold">
               full-stack developer
             </span>{" "}
@@ -38,7 +42,7 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-        <div className="bg-[#efc0b3] p-10 rounded-2xl">
+        <div className="bg-[#efc0b3] p-10 rounded-2xl shadow-xl w-72">
           <h3 className="text-4xl text-center font-semibold">Skills</h3>
           <ul className="mt-3 pt-3 flex flex-col gap-3 items-center border-t-2 border-dashed">
             <li>
@@ -65,6 +69,7 @@ export default function AboutMe() {
           </ul>
         </div>
       </div>
+      <div className="mt-10 bg-[#efc0b3] w-[74rem] h-96 rounded-xl">hello</div>
     </div>
   );
 }
