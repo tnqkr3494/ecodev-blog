@@ -2,11 +2,12 @@ import Image from "next/image";
 import avatar from "../img/kang.png";
 import AboutMe from "@/components/about-me";
 import SideBar from "@/components/sidebar";
+import Works from "@/components/works";
 
 export default function Home() {
   return (
     <>
-      <section id="welcome" className="mb-60">
+      <section id="welcome" className="mb-60  pl-20">
         <div className="flex flex-wrap items-center">
           <div className="h-screen flex flex-col justify-center pr-52 font-semibold">
             <h1 className="text-[#FFC8DD] text-9xl">Hello</h1>
@@ -16,6 +17,7 @@ export default function Home() {
         </div>
       </section>
       <AboutMe />
+      <Works />
       <SideBar />
     </>
   );

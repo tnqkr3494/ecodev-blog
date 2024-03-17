@@ -4,7 +4,7 @@ import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
 
 export default function AboutMe() {
   return (
-    <div>
+    <div className="pb-96  pl-20">
       <h1 className="text-6xl text-[#F2E9E4] mb-20 font-semibold">About Me</h1>
       <div
         id="about"
