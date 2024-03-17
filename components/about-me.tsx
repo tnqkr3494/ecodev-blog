@@ -2,6 +2,7 @@ import Image from "next/image";
 import avatar from "../img/kang.png";
 import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
 import styles from "../styles/cross-effect.module.css";
+import MyChart from "./mychart";
 
 export default function AboutMe() {
   return (
@@ -69,7 +70,9 @@ export default function AboutMe() {
           </ul>
         </div>
       </div>
-      <div className="mt-10 bg-[#9f86c0] w-[74rem] h-96 rounded-xl shadow-xl"></div>
+      <div className="w-[74rem] bg-[#9f86c0] rounded-2xl shadow-xl">
+        <MyChart />
+      </div>
     </div>
   );
 }
