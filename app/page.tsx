@@ -1,8 +1,8 @@
 import Image from "next/image";
 import avatar from "../img/kang.png";
 import AboutMe from "@/components/about-me";
-import SideBar from "@/components/sidebar";
 import Works from "@/components/works";
+import SideBar from "@/components/sidebar";
 
 export default function Home() {
   return (

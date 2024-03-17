@@ -4,12 +4,9 @@ import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
 
 export default function AboutMe() {
   return (
-    <div className="pb-96  pl-20">
+    <div id="about" className="pb-96  pl-20">
       <h1 className="text-6xl text-[#F2E9E4] mb-20 font-semibold">About Me</h1>
-      <div
-        id="about"
-        className="grid grid-cols-5 gap-2  text-[#F2E9E4] text-xl leading-8 "
-      >
+      <div className="grid grid-cols-5 gap-2  text-[#F2E9E4] text-xl leading-8 ">
         <div className="bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4] p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">
           <p className="pr-8">
             Hello✋ I am a front-end engineer who is working under the nickname
