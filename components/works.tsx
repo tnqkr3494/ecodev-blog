@@ -7,10 +7,10 @@ export default function Works() {
         My Works
       </h1>
       <div className="flex flex-wrap px-40 -translate-x-6 gap-8 justify-center">
-        <Card video="video1" />
-        <Card video="video2" />
-        <Card video="video3" />
-        <Card video="video4" />
+        <Card video="video1" title="MovieSite" />
+        <Card video="video2" title="ToDo" />
+        <Card video="video3" title="Carrot-Market" />
+        <Card video="video4" title="CSS" />
       </div>
     </div>
   );
