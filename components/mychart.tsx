@@ -21,14 +21,14 @@ ChartJS.register(
 
 const MyChart = () => {
   return (
-    <div className="h-[20rem] w-[74rem] mt-7">
+    <div className="h-[20rem] w-[100rem] mt-7">
       <Line
         data={{
           labels: ["begin", "teenage", "adult", "now"],
           datasets: [
             {
               data: [0, 10, 5, 15],
-              borderColor: "#F2E9E4",
+              borderColor: "#d4a373",
               borderWidth: 5,
             },
           ],
@@ -37,7 +37,7 @@ const MyChart = () => {
           scales: {
             x: {
               ticks: {
-                color: "#F2E9E4",
+                color: "#d4a373",
                 font: {
                   size: 20,
                 },
