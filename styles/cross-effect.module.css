@@ -5,8 +5,8 @@
   position: absolute;
   background: #e9edc9;
   z-index: -1;
-  bottom: 0px;
   left: 0px;
+  top: 500px;
   transform-origin: right bottom;
   transform: skewY(-5deg);
 }

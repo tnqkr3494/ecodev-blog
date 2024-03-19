@@ -1,5 +1,3 @@
-import Image from "next/image";
-import avatar from "../img/kang.png";
 import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
 import styles from "../styles/cross-effect.module.css";
 import MyChart from "./mychart";
@@ -30,7 +28,6 @@ export default function AboutMe() {
             different people in the future!!
           </p>
           <div className="gap-10 flex flex-col border-l-2 pl-6">
-            <Image src={avatar} alt="avatar" className="rounded-full" />
             <div className="flex items-center gap-4">
               <HomeIcon className="w-10 h-10" />
               <EnvelopeIcon className="w-10 h-10" />
@@ -73,23 +70,31 @@ export default function AboutMe() {
           </ul>
         </div>
       </div>
-      <div className="w-[74rem] mt-8 bg-[#faedcd] rounded-2xl shadow-xl flex p-5">
+      <div className="w-[74rem] mt-8 bg-[#faedcd] rounded-2xl shadow-xl flex p-5 items-center">
         <MyChart />
         <div className="w-full ml-20">
           <h3 className="text-2xl text-center font-semibold text-[#d4a373]">
             LifeTime
           </h3>
           <div className="mt-5 text-[#d4a373] font-semibold gap-5 flex flex-col">
-            <ul className="flex flex-col gap-4">
-              <List text="born in jeju" />
-              <List text="graduate schools" />
-              <List text="change" />
+            <ul className="flex flex-col gap-4 mb-5">
+              <List year="2001.08.20" text="born in jeju" />
+              <List year="2019.11.14" text="choose schools" />
+              <List year="2019.11.30" text="change" />
             </ul>
-            <ul className="flex flex-col gap-4">
-              <List text="enter the sejong university" />
-              <List text="learn about basic front-end" />
-              <List text="go react" />
-              <List text="work with ts&nextjs" />
+            <ul className="flex flex-col gap-4 items-end">
+              <List
+                reversed
+                year="2020.02.24"
+                text="enter the sejong university"
+              />
+              <List
+                reversed
+                year="2022.06.28"
+                text="learn about basic front-end"
+              />
+              <List reversed year="2023.07.19" text="go react" />
+              <List reversed year="2023.08.12" text="work with ts&nextjs" />
             </ul>
           </div>
         </div>
