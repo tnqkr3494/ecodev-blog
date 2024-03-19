@@ -47,7 +47,7 @@ export default function AboutMe() {
               </div>
             </div>
           </div>
-          <div className="bg-[#faedcd] p-10 rounded-2xl shadow-xl w-72">
+          <div className="bg-[#faedcd] p-10 rounded-2xl shadow-xl w-80">
             <h3 className="text-4xl text-center font-semibold text-[#d4a373]">
               Skills
             </h3>
@@ -76,7 +76,7 @@ export default function AboutMe() {
             </ul>
           </div>
         </div>
-        <div className="w-[74rem] mt-8 bg-[#faedcd] rounded-2xl shadow-xl flex p-5 items-center">
+        <div className="w-[76rem] mt-8 bg-[#faedcd] rounded-2xl shadow-xl flex p-5 items-center">
           <MyChart />
           <div className="w-full ml-20">
             <h3 className="text-2xl text-center font-semibold text-[#d4a373]">
