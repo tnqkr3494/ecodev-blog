@@ -8,7 +8,7 @@ import Dropdown from "@/components/dropdown";
 export default function AboutMe() {
   return (
     <>
-      <div id="about" className="pt-32 pl-20 bg-secion1 w-full">
+      <div id="about" className="pt-32 pl-20 w-full">
         <h1 className="text-6xl text-title mb-20 font-semibold">About Me</h1>
         <div className="flex flex-wrap gap-2  text-p-color text-xl leading-8 ">
           <div className="max-w-4xl bg-card p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">

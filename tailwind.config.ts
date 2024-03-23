@@ -21,5 +21,22 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animated"), require("daisyui")],
+
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          ".btn-home": {
+            height: "7rem",
+            width: "14rem",
+          },
+        },
+      },
+      "halloween",
+      "autumn",
+    ],
+    base: true,
+  },
 };
 export default config;

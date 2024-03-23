@@ -2,7 +2,10 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex justify-between text-2xl fixed top-0 w-full px-20 py-7 z-50 bg-[#ccd5ae]">
+    <header
+      className="flex justify-between text-2xl fixed top-0 w-full px-20 py-7 z-50"
+      data-theme="halloween"
+    >
       <Link href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"

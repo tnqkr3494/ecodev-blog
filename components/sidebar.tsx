@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <div className="top-[10.5rem] fixed flex flex-col items-center gap-10 pl-4 bg-[#ccd5ae] text-center">
+    <div className="top-[10.5rem] fixed flex flex-col items-center gap-10 pl-4 text-center">
       <Link href="/posts/category/front">
         <img src="/html.svg" className="w-10 h-10" />
         <span>front</span>
