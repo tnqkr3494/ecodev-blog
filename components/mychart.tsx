@@ -33,6 +33,21 @@ export const options = {
       display: false,
     },
   },
+  scales: {
+    x: {
+      ticks: {
+        display: false,
+      },
+    },
+    y: {
+      ticks: {
+        color: "#d4a373",
+        font: {
+          size: 15,
+        },
+      },
+    },
+  },
 };
 
 const labels = [
@@ -69,8 +84,8 @@ export default function MyChart({
       {
         label: "점수",
         data: [c, python, java, js, ts, react, css],
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "#d4a373",
+        backgroundColor: "#d4a373",
       },
     ],
   };

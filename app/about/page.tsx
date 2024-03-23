@@ -2,6 +2,8 @@ import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
 import MyChart from "@/components/mychart";
 import List from "@/components/list";
 import Works from "@/components/works";
+import Life from "@/components/lifetime";
+import Dropdown from "@/components/dropdown";
 
 export default function AboutMe() {
   return (
@@ -45,20 +47,12 @@ export default function AboutMe() {
             <h3 className="text-2xl text-center font-semibold text-title">
               LifeTime
             </h3>
-            <div className="mt-5 text-sm text-title font-semibold flex flex-col">
-              <ul className="flex flex-col gap-4 mb-5">
-                <List year="2001.08.20" text="born in jeju" />
-                <List year="2019.11.14" text="choose schools" />
-                <List year="2019.11.30" text="change" />
-                <List year="2020.02.24" text="enter the sejong university" />
-                <List year="2022.06.28" text="learn about basic front-end" />
-                <List year="2023.07.19" text="go react" />
-                <List year="2023.08.12" text="work with ts&nextjs" />
-              </ul>
+            <div className="mt-5 text-sm text-title font-semibold capitalize flex flex-col">
+              <Life />
             </div>
           </div>
         </div>
-        <div className="w-[76rem] mt-8 bg-card rounded-2xl shadow-xl items-center flex p-5">
+        <div className="w-[76rem] h-96 mt-8 bg-card rounded-2xl shadow-xl items-center flex  p-5">
           <MyChart
             c={40}
             python={90}
@@ -68,7 +62,10 @@ export default function AboutMe() {
             react={95}
             css={80}
           />
-          <div className="w-full ml-20"></div>
+          <div className="w-full ml-20 flex flex-col gap-5">
+            <Dropdown title="skills" />
+            <Dropdown title="next" />
+          </div>
         </div>
       </div>
       <Works />
