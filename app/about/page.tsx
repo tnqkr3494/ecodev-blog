@@ -1,5 +1,4 @@
 import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
-import styles from "../../styles/cross-effect.module.css";
 import MyChart from "@/components/mychart";
 import List from "@/components/list";
 import Works from "@/components/works";
@@ -7,20 +6,15 @@ import Works from "@/components/works";
 export default function AboutMe() {
   return (
     <>
-      <div
-        id="about"
-        className={`${styles.container} pt-32 pl-20 bg-[#e9edc9] w-full`}
-      >
-        <h1 className="text-6xl text-[#d4a373] mb-20 font-semibold">
-          About Me
-        </h1>
-        <div className="flex flex-wrap gap-2  text-[#ddbea9] text-xl leading-8 ">
-          <div className="max-w-4xl bg-[#faedcd] p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">
+      <div id="about" className="pt-32 pl-20 bg-secion1 w-full">
+        <h1 className="text-6xl text-title mb-20 font-semibold">About Me</h1>
+        <div className="flex flex-wrap gap-2  text-p-color text-xl leading-8 ">
+          <div className="max-w-4xl bg-card p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">
             <p className="pr-8">
               Hello✋ I am a front-end engineer who is working under the
               nickname <span>EcoDev</span>.I am studying while dreaming of
               becoming a{" "}
-              <span className="text-[#d4a373] font-semibold">
+              <span className="text-title font-semibold">
                 full-stack developer
               </span>{" "}
               in the future.
@@ -47,8 +41,8 @@ export default function AboutMe() {
               </div>
             </div>
           </div>
-          <div className="bg-[#faedcd] p-10 rounded-2xl shadow-xl w-80">
-            <h3 className="text-4xl text-center font-semibold text-[#d4a373]">
+          <div className="bg-card p-10 rounded-2xl shadow-xl w-80">
+            <h3 className="text-4xl text-center font-semibold text-title">
               Skills
             </h3>
             <ul className="mt-3 pt-3 flex flex-col gap-3 items-center border-t-2 border-dashed">
@@ -76,13 +70,13 @@ export default function AboutMe() {
             </ul>
           </div>
         </div>
-        <div className="w-[76rem] mt-8 bg-[#faedcd] rounded-2xl shadow-xl flex p-5 items-center">
+        <div className="w-[76rem] mt-8 bg-card rounded-2xl shadow-xl flex p-5 items-center">
           <MyChart />
           <div className="w-full ml-20">
-            <h3 className="text-2xl text-center font-semibold text-[#d4a373]">
+            <h3 className="text-2xl text-center font-semibold text-title">
               LifeTime
             </h3>
-            <div className="mt-5 text-[#d4a373] font-semibold gap-5 flex flex-col">
+            <div className="mt-5 text-title font-semibold gap-5 flex flex-col">
               <ul className="flex flex-col gap-4 mb-5">
                 <List year="2001.08.20" text="born in jeju" />
                 <List year="2019.11.14" text="choose schools" />

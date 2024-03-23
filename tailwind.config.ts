@@ -6,7 +6,20 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        title: "#d4a373",
+        "small-title": "#FEFAE0",
+        "p-color": "#ddbea9",
+      },
+      backgroundColor: {
+        section1: "#ccd5ae",
+        section2: "#e9edc9",
+        card: "#faedcd",
+      },
+    },
+  },
   plugins: [require("tailwindcss-animated")],
 };
 export default config;

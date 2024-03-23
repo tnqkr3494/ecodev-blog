@@ -2,8 +2,8 @@ import Card from "./card";
 
 export default function Works() {
   return (
-    <div id="works" className="pt-80 pb-52">
-      <h1 className="text-6xl text-[#d4a373] mb-20 font-semibold text-center">
+    <div id="works" className="mt-80 pt-24 pb-52 -z-10 bg-section2">
+      <h1 className="text-6xl text-title mb-20 font-semibold text-center">
         My Works
       </h1>
       <div className="flex flex-wrap px-40 -translate-x-6 gap-8 justify-center">
