@@ -36,7 +36,6 @@ const config: Config = {
       "halloween",
       "autumn",
     ],
-    base: true,
   },
 };
 export default config;
