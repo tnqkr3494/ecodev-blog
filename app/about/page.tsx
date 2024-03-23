@@ -10,7 +10,7 @@ export default function AboutMe() {
         <h1 className="text-6xl text-title mb-20 font-semibold">About Me</h1>
         <div className="flex flex-wrap gap-2  text-p-color text-xl leading-8 ">
           <div className="max-w-4xl bg-card p-10 col-span-3 flex justify-center items-center rounded-2xl hover:scale-105 hover:-translate-y-6 transition-transform shadow-xl">
-            <p className="pr-8">
+            <p className="pr-8 text-xl">
               Hello✋ I am a front-end engineer who is working under the
               nickname <span>EcoDev</span>.I am studying while dreaming of
               becoming a{" "}
@@ -42,62 +42,33 @@ export default function AboutMe() {
             </div>
           </div>
           <div className="bg-card p-10 rounded-2xl shadow-xl w-80">
-            <h3 className="text-4xl text-center font-semibold text-title">
-              Skills
-            </h3>
-            <ul className="mt-3 pt-3 flex flex-col gap-3 items-center border-t-2 border-dashed">
-              <li>
-                <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
-              </li>
-              <li>
-                <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" />
-              </li>
-              <li>
-                <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
-              </li>
-              <li>
-                <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
-              </li>
-              <li>
-                <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-              </li>
-              <li>
-                <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
-              </li>
-              <li>
-                <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" />
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="w-[76rem] mt-8 bg-card rounded-2xl shadow-xl flex p-5 items-center">
-          <MyChart />
-          <div className="w-full ml-20">
             <h3 className="text-2xl text-center font-semibold text-title">
               LifeTime
             </h3>
-            <div className="mt-5 text-title font-semibold gap-5 flex flex-col">
+            <div className="mt-5 text-sm text-title font-semibold flex flex-col">
               <ul className="flex flex-col gap-4 mb-5">
                 <List year="2001.08.20" text="born in jeju" />
                 <List year="2019.11.14" text="choose schools" />
                 <List year="2019.11.30" text="change" />
-              </ul>
-              <ul className="flex flex-col gap-4 items-end">
-                <List
-                  reversed
-                  year="2020.02.24"
-                  text="enter the sejong university"
-                />
-                <List
-                  reversed
-                  year="2022.06.28"
-                  text="learn about basic front-end"
-                />
-                <List reversed year="2023.07.19" text="go react" />
-                <List reversed year="2023.08.12" text="work with ts&nextjs" />
+                <List year="2020.02.24" text="enter the sejong university" />
+                <List year="2022.06.28" text="learn about basic front-end" />
+                <List year="2023.07.19" text="go react" />
+                <List year="2023.08.12" text="work with ts&nextjs" />
               </ul>
             </div>
           </div>
+        </div>
+        <div className="w-[76rem] mt-8 bg-card rounded-2xl shadow-xl items-center flex p-5">
+          <MyChart
+            c={40}
+            python={90}
+            java={50}
+            js={90}
+            ts={80}
+            react={95}
+            css={80}
+          />
+          <div className="w-full ml-20"></div>
         </div>
       </div>
       <Works />

@@ -10,7 +10,7 @@ export default function List({ text, year, reversed = false }: IList) {
   return (
     <li
       className={cls(
-        "flex items-center gap-3",
+        "flex flex-col text-center capitalize ",
         reversed ? "flex-row-reverse" : ""
       )}
     >

@@ -1,63 +1,82 @@
-// components/MyLineChart.tsx
 "use client";
+import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
+  BarElement,
+  Title,
   Tooltip,
-  PointElement,
-  LineElement,
+  Legend,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
-// Register ChartJS components using ChartJS.register
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
-  Tooltip
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
 );
 
-const MyChart = () => {
+export const options = {
+  indexAxis: "y" as const,
+  elements: {
+    bar: {
+      borderWidth: 2,
+    },
+  },
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
+};
+
+const labels = [
+  "C Programming",
+  "Python",
+  "Java",
+  "JavaScript",
+  "TypeScript",
+  "React/Next",
+  "CSS Design",
+];
+
+interface MajorProps {
+  c: number;
+  python: number;
+  java: number;
+  js: number;
+  ts: number;
+  react: number;
+  css: number;
+}
+export default function MyChart({
+  c,
+  python,
+  java,
+  js,
+  ts,
+  react,
+  css,
+}: MajorProps) {
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "점수",
+        data: [c, python, java, js, ts, react, css],
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  };
   return (
-    <div className="h-[20rem] w-[100rem] mt-7">
-      <Line
-        data={{
-          labels: ["begin", "teenage", "adult", "now"],
-          datasets: [
-            {
-              data: [0, 10, 5, 15],
-              borderColor: "#d4a373",
-              borderWidth: 5,
-            },
-          ],
-        }}
-        options={{
-          scales: {
-            x: {
-              ticks: {
-                color: "#d4a373",
-                font: {
-                  size: 20,
-                },
-              },
-              grid: {
-                display: false, // x 축 그리드 숨기기
-              },
-            },
-            y: {
-              display: false, // y 축 눈금 숨기기
-            },
-          },
-          plugins: {
-            legend: {
-              display: false, // 범례 숨기기
-            },
-          },
-        }}
-      />
+    <div className="w-[90vw] max-w-4xl ml-10">
+      <Bar options={options} data={data} />
     </div>
   );
-};
-export default MyChart;
+}
