@@ -25,15 +25,14 @@ const config: Config = {
   daisyui: {
     themes: [
       {
-        dark: {
-          ...require("daisyui/src/theming/themes")["dark"],
+        halloween: {
+          ...require("daisyui/src/theming/themes")["halloween"],
           ".btn-home": {
             height: "7rem",
             width: "14rem",
           },
         },
       },
-      "halloween",
       "autumn",
     ],
   },
