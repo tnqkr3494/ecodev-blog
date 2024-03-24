@@ -6,6 +6,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Computer } from "../computer.jsx";
 import Life from "@/components/lifetime";
 import Link from "next/link";
+import IconCirlce from "@/components/circle";
 
 export default function AboutMe() {
   return (
@@ -19,7 +20,7 @@ export default function AboutMe() {
               <div className="flex flex-col items-center">
                 <span className="font-semibold text-xl">강인권 / EcoDev</span>
                 <span className="text-xs">Front-End Developer</span>
-                <span className="font-extrabold text-indigo-500 text-xs mt-2">
+                <span className="font-extrabold text-title text-xs mt-2">
                   MBTI : INTJ
                 </span>
               </div>
@@ -74,126 +75,85 @@ export default function AboutMe() {
               technology stacks that i use
             </h1>
             <ul className="flex gap-4">
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
+                name="macOS"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                name="vscode"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg"
+                name="notion"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                name="python"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                name="java"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                name="HTML"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                name="CSS"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                name="JS"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                name="TS"
+              />
             </ul>
             <ul className="flex gap-4">
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original-wordmark.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img src="/recoil.svg" className="w-16 h-16" />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
-                  className="w-16 h-16"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg"
-                  className="w-16 h-16"
-                />
-              </li>
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                name="React"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original-wordmark.svg"
+                name="Router"
+              />
+              <IconCirlce link="/recoil.svg" name="recoil" />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg"
+                name="NextJS"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                name="tailwind"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg"
+                name="prisma"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg"
+                name="vercel"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+                name="spring"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                name="git"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                name="github"
+              />
+              <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
+                name="npm"
+              />
             </ul>
           </div>
           <div className="flex items-center my-40">
