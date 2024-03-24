@@ -8,7 +8,7 @@ export default function Dropdown({ title }: IDropdown) {
       tabIndex={0}
       className="font-semibold collapse bg-section1 text-title focus:bg-section2 focus:text-p-color capitalize"
     >
-      <div className="collapse-title text-2xl text-center">{title}</div>
+      <div className="collapse-title text-2xl">{title}</div>
       <div className="collapse-content flex flex-col">
         <ul>
           <li>react-router</li>
