@@ -55,7 +55,7 @@ export default function AboutMe() {
               different people in the future!!
             </p>
           </div>
-          <div className="w-96 h-96">
+          <div className="w-[26rem] h-96">
             <Canvas camera={{ position: [-100, 50, 10] }}>
               <OrbitControls />
               <ambientLight intensity={1} />
