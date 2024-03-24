@@ -25,4 +25,4 @@ export function Computer(props) {
   );
 }
 
-useGLTF.preload("/scene.gltf");
+useGLTF.preload("/models/scene.gltf");

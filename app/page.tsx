@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <section id="welcome" className="px-20">
         <div className="flex flex-wrap items-center justify-around">
-          <div className="h-screen flex flex-col justify-center items-baseline font-semibold">
+          <div className="h-screen flex flex-col justify-center items-baseline font-extrabold">
             <h1 className=" text-9xl animate-fade-up animate-ease-linear ">
               Hello
             </h1>
@@ -13,14 +13,14 @@ export default function Home() {
               Welcome to my blog
               <span>✌🏻</span>
             </h3>
-            <div className="flex gap-2">
+            <div className="flex gap-2 font-extrabold">
               <Link href="/about">
-                <button className="btn btn-home font-semibold text-4xl mt-5 rounded-xl">
+                <button className="btn btn-home  text-4xl mt-5 rounded-xl">
                   About
                 </button>
               </Link>
               <Link href="/posts">
-                <button className="btn btn-home font-semibold text-4xl mt-5 rounded-xl">
+                <button className="btn btn-home  text-4xl mt-5 rounded-xl">
                   Posts
                 </button>
               </Link>

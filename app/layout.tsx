@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nanum_Gothic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/headers";
 
-const inter = Inter({ subsets: ["latin"] });
+const nanum = Nanum_Gothic({
+  weight: ["400", "700", "800"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Home | EcoDev",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="halloween">
-      <body className={`${inter.className}`}>
+      <body className={`${nanum.className}`}>
         <Header />
         {children}
       </body>
