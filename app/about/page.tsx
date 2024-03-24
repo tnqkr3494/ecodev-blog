@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function AboutMe() {
   return (
     <>
-      <div id="about" className="pt-32 pl-20 w-full">
+      <div id="about" className="pt-32 px-20 w-full">
         <h1 className="text-6xl mb-20 font-extrabold">About Me</h1>
         <section className="flex items-center">
           <div className="max-w-4xl flex">
@@ -19,6 +19,9 @@ export default function AboutMe() {
               <div className="flex flex-col items-center">
                 <span className="font-semibold text-xl">강인권 / EcoDev</span>
                 <span className="text-xs">Front-End Developer</span>
+                <span className="font-extrabold text-indigo-500 text-xs mt-2">
+                  MBTI : INTJ
+                </span>
               </div>
               <div className="flex items-center gap-4">
                 <Link href="/">
@@ -40,19 +43,19 @@ export default function AboutMe() {
             </div>
             <p className="pl-8 text-xl">
               Hello✋ I am a front-end engineer who is working under the
-              nickname <span>EcoDev</span>.I am studying while dreaming of
+              nickname <span>EcoDev</span>. I am studying while dreaming of
               becoming a{" "}
               <span className="text-title font-extrabold">
                 full-stack developer
               </span>{" "}
               in the future.
               <br />
-              <br />I am creating a website in pursuit of user-friendly
+              <br /> I am creating a website in pursuit of user-friendly
               features, designs. And I feel rewarded by implementing the
               behavior of the web front end on my own and seeing it run.
               <br />
               <br />I would like to share various experiences and knowledge with
-              different people in the future!!
+              various people from now on!
             </p>
           </div>
           <div className="w-[26rem] h-96">
