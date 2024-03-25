@@ -14,10 +14,6 @@ export default function ChatBubble() {
     });
 
     observer.observe(ref.current);
-
-    return () => {
-      observer.unobserve(ref.current!); // null 체크 후 사용
-    };
   }, []);
   return (
     <div ref={ref} className="flex flex-col gap-4">
