@@ -3,10 +3,11 @@
 import { EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Computer } from "../computer.jsx";
+import { Computer } from "../computer";
 import Life from "@/components/lifetime";
 import Link from "next/link";
 import IconCirlce from "@/components/circle";
+import ChatBubble from "@/components/chatbubble";
 
 export default function AboutMe() {
   return (
@@ -157,8 +158,8 @@ export default function AboutMe() {
             </ul>
           </div>
           <div className="flex items-center my-40">
-            <img src="/imo2.png" className="w-64 h-64" />
-            <p>안녕하세요 반갑습니다.</p>
+            <img src="/imo2.png" className="w-64 h-64 mr-20" />
+            <ChatBubble />
           </div>
         </section>
 

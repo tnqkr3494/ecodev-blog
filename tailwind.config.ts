@@ -20,7 +20,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animated"), require("daisyui")],
+  plugins: [
+    require("tailwindcss-animated"),
+    require("daisyui"),
+    require("tailwindcss-intersect"),
+  ],
 
   daisyui: {
     themes: [
