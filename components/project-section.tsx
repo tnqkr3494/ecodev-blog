@@ -2,27 +2,41 @@ import { cls } from "@/utils/utils";
 
 interface IProjectSection {
   reversed?: boolean;
+  videoSrc: string;
+  title: string;
+  description?: string;
 }
 
-export default function ProejectSection({ reversed = false }: IProjectSection) {
+export default function ProjectSection({
+  reversed = false,
+  videoSrc,
+  title,
+  description = "dd",
+}: IProjectSection) {
   return (
     <section
-      className={cls("relative", reversed ? "flex flex-row-reverse" : "")}
+      className={cls(
+        "relative flex flex-wrap",
+        reversed ? "flex-row-reverse" : ""
+      )}
     >
-      <div className="card w-96 bg-base-100 shadow-xl image-full">
-        <figure>
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
+      <div className="w-[45rem] shadow-xl relative">
+        <article>
+          <video
+            src={videoSrc}
+            loop
+            muted
+            preload="auto"
+            className="opacity-50"
           />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-        </div>
+        </article>
       </div>
-      <div className="absolute top-1/2 left-80 z-10 bg-base-100 max-w-3xl p-5">
-        <h2>My Project</h2>
+      <div
+        className={`absolute top-1/2 ${
+          reversed ? "right-1/3" : "left-1/3"
+        } z-10 bg-base-300 bg-opacity-50 max-w-3xl p-5 rounded-lg`}
+      >
+        <h2 className="font-extrabold text-2xl text-title">{title}</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
           itaque hic molestias maiores eius a recusandae aperiam cumque totam
