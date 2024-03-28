@@ -18,11 +18,12 @@ export default function AboutMe() {
           <div className="max-w-4xl flex">
             <div className="flex flex-col border-r-2 pr-6 items-center gap-3">
               <img src="/imo.png" alt="avatar" className="rounded-full" />
+              <span className="text-[0.5rem]">MBTI : INTJ</span>
               <div className="flex flex-col items-center">
                 <span className="font-semibold text-xl">강인권 / EcoDev</span>
                 <span className="text-xs">Front-End Developer</span>
                 <span className="font-extrabold text-title text-xs mt-2">
-                  MBTI : INTJ
+                  Work in sejong Univ.
                 </span>
               </div>
               <div className="flex items-center gap-4">

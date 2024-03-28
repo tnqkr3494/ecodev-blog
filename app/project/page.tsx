@@ -1,11 +1,13 @@
 import ProejectSection from "@/components/project-section";
+import Link from "next/link";
 
 export default function Project() {
   return (
-    <main className="pt-56 px-20 flex flex-col gap-72">
+    <main className="py-56 px-20 flex flex-col gap-72">
       <ProejectSection
         title="Movie Site"
-        videoSrc="/video1.mp4"
+        imgSrc="/project1.png"
+        codeSrc="https://github.com/tnqkr3494/ReactJs-ms/tree/460c7b204a97262ca935d9a398e7c6e91f7f8f22"
         skills={["react", "styled-component", "react-router", "framer-motion"]}
         description="react를 본격적으로 배우면서 해본 프로젝트. react-router의 사용방법을 익힐 수 있었고, styled-component와 framer-motion
         의 조합으로 interactive한 사이트를 제작해 볼 수 있었다. 또한 api를 이용하는 방법으로 여러 영화들의 정보들을 불러와서 사이트 제작을
@@ -14,7 +16,8 @@ export default function Project() {
       />
       <ProejectSection
         title="ToDo List"
-        videoSrc="/video2.mp4"
+        imgSrc="/project2.png"
+        codeSrc="https://github.com/tnqkr3494/ReactJs-ms/tree/8bf9b60da778a54104762cd991a7038e942a37b3"
         reversed={true}
         skills={["react", "styled-component", "recoil", "beautiful-dnd"]}
         description="react-beautiful-dnd라는 라이브러리를 이용하여 애니메이션이 있는 todo리스트를 만들어 보았다.
@@ -24,7 +27,8 @@ export default function Project() {
       />
       <ProejectSection
         title="Carrot-Market"
-        videoSrc="/video3.mp4"
+        imgSrc="/project3.png"
+        codeSrc="https://github.com/tnqkr3494/carrot-market"
         skills={["NextJS", "tailwind", "prisma", "planetscale"]}
         description="NextJS12버전을 사용하면서 만들었던 프로젝트. 강의를 들으면서 천천히 이해하고 복습해가며 만들었다.
         E-Commerce사이트를 직접 구현해보면서 백엔드 동작까지 Next의 도움으로 맛볼 수 있었다.
@@ -33,7 +37,8 @@ export default function Project() {
       />
       <ProejectSection
         title="CSS Practice"
-        videoSrc="/video4.mp4"
+        imgSrc="/project4.png"
+        codeSrc="https://github.com/tnqkr3494/Css-practice"
         reversed={true}
         skills={["HTML", "CSS", "JS"]}
         description="react, NextJS, 기타 라이브러리들을 배우기 급급하여 기본기가 부족함을 느꼈다.
@@ -42,6 +47,20 @@ export default function Project() {
         튜닝의 끝은 순정...
         "
       />
+      <section className="flex flex-col gap-32 items-center">
+        <div className="w-16 h-16 rounded-full bg-base-300"></div>
+        <div className="w-16 h-16 rounded-full bg-base-300"></div>
+        <div className="w-16 h-16 rounded-full bg-base-300"></div>
+
+        <Link
+          href="https://github.com/tnqkr3494"
+          className="cursor-pointer animate-bounce"
+        >
+          <span className="text-4xl font-extrabold underline underline-offset-4">
+            Discover more projects
+          </span>
+        </Link>
+      </section>
     </main>
   );
 }

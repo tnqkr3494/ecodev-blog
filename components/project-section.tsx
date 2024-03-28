@@ -1,9 +1,13 @@
+"use client";
+
 import { cls } from "@/utils/utils";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 interface IProjectSection {
   reversed?: boolean;
-  videoSrc: string;
+  imgSrc: string;
+  codeSrc: string;
   title: string;
   description?: string;
   skills: string[];
@@ -11,27 +15,43 @@ interface IProjectSection {
 
 export default function ProjectSection({
   reversed = false,
-  videoSrc,
+  imgSrc,
+  codeSrc,
   title,
   description = "dd",
   skills,
 }: IProjectSection) {
+  const [intersect, setIntersect] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!ref.current) return; // null 체크
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setIntersect(entry.isIntersecting); // IntersectionObserver 결과를 상태에 반영
+      });
+    });
+
+    observer.observe(ref.current);
+  }, []);
+
   return (
     <section
+      ref={ref}
       className={cls(
         "relative flex flex-wrap",
-        reversed ? "flex-row-reverse" : ""
+        reversed ? "flex-row-reverse" : "",
+        intersect
+          ? reversed
+            ? "animate-fade-left animate-delay-100"
+            : "animate-fade-right"
+          : ""
       )}
     >
       <div className="w-[45rem] shadow-xl relative">
         <article>
-          <video
-            src={videoSrc}
-            loop
-            muted
-            preload="auto"
-            className="opacity-50"
-          />
+          <img src={imgSrc} className="rounded-lg" />
         </article>
       </div>
       <div
@@ -51,9 +71,14 @@ export default function ProjectSection({
           <span className="ml-2">and more...</span>
         </h3>
         <p>{description}</p>
-        <Link href="/posts/category/front/dd">
-          <button className="btn btn-outline">Go To Detail</button>
-        </Link>
+        <div className="flex gap-3">
+          <Link href="/posts/category/front/dd">
+            <button className="btn btn-outline">Go To Detail</button>
+          </Link>
+          <Link href={codeSrc}>
+            <button className="btn btn-outline">Code</button>
+          </Link>
+        </div>
       </div>
     </section>
   );
