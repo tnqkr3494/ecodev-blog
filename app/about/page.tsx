@@ -12,7 +12,7 @@ import ChatBubble from "@/components/chatbubble";
 export default function AboutMe() {
   return (
     <>
-      <div id="about" className="pt-32 px-20 w-full">
+      <div id="about" className="pt-40 px-20 w-full">
         <h1 className="text-6xl mb-20 font-extrabold">About Me</h1>
         <section className="flex items-center">
           <div className="max-w-4xl flex">

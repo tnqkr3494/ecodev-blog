@@ -2,70 +2,68 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header
-      className="flex justify-between text-2xl fixed top-0 w-full px-20 py-7 z-50"
-      data-theme=""
-    >
-      <Link href="/">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 576 512"
-          className="w-10 h-10"
-        >
-          <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
-        </svg>
-      </Link>
-      <div className="flex gap-10">
-        <Link href="/works">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 384 512"
-            className="w-10 h-10"
-          >
-            <path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z" />
-          </svg>
-        </Link>
-        <Link href="/posts">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 640 512"
-            className="w-10 h-10"
-          >
-            <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
-          </svg>
-        </Link>
-        <Link href="/about">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            className="w-10 h-10"
-          >
-            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-          </svg>
-        </Link>
-        <label className="swap swap-rotate">
-          {/* this hidden checkbox controls the state */}
-          <input type="checkbox" className="theme-controller" value="autumn" />
-
-          {/* sun icon */}
-          <svg
-            className="swap-off fill-current w-10 h-10"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
-          </svg>
-
-          {/* moon icon */}
-          <svg
-            className="swap-on fill-current w-10 h-10"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-          </svg>
-        </label>
+    <header className="flex justify-between text-2xl fixed top-0 w-full px-20 py-3 z-50  bg-base-100 border-b-[1px] shadow-md">
+      <div className="navbar">
+        <div className="flex-1">
+          <Link href="/" className="btn btn-ghost text-xl font-extrabold">
+            Home
+          </Link>
+        </div>
+        <div className="flex-none">
+          <ul className="menu menu-horizontal px-1 font-semibold">
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/project">Project</Link>
+            </li>
+            <li>
+              <details>
+                <summary>Posts</summary>
+                <ul className="p-2 bg-base-100 rounded-t-none">
+                  <li>
+                    <Link href="/posts">All</Link>
+                  </li>
+                  <li>
+                    <Link href="/posts/category/front">front</Link>
+                  </li>
+                  <li>
+                    <Link href="/posts/category/back">back</Link>
+                  </li>
+                  <li>
+                    <Link href="/posts/category/cs">CS</Link>
+                  </li>
+                  <li>
+                    <Link href="/posts/category/algorithm">Algorithm</Link>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
       </div>
+      <label className="swap swap-rotate">
+        {/* this hidden checkbox controls the state */}
+        <input type="checkbox" className="theme-controller" value="autumn" />
+
+        {/* sun icon */}
+        <svg
+          className="swap-off fill-current w-10 h-10"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+        </svg>
+
+        {/* moon icon */}
+        <svg
+          className="swap-on fill-current w-10 h-10"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+        </svg>
+      </label>
     </header>
   );
 }

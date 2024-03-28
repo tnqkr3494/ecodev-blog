@@ -19,7 +19,7 @@ export default function ChatBubble() {
     <div ref={ref} className="flex flex-col gap-4">
       <div
         className={`chat chat-start ${
-          intersect ? "animate-fade-up animate-duration-300" : "opacity-0"
+          intersect ? "animate-fade-up animate-duration-500" : "opacity-0"
         }`}
       >
         <div className="chat-image avatar">
@@ -34,7 +34,7 @@ export default function ChatBubble() {
       <div
         className={`chat chat-start ${
           intersect
-            ? "animate-fade-up animate-duration-300 animate-delay-[500ms]"
+            ? "animate-fade-up animate-duration-500 animate-delay-[500ms]"
             : "opacity-0"
         }`}
       >
@@ -51,7 +51,7 @@ export default function ChatBubble() {
       <div
         className={`chat chat-start ${
           intersect
-            ? "animate-fade-up animate-duration-300 animate-delay-[1000ms]"
+            ? "animate-fade-up animate-duration-500 animate-delay-[1000ms]"
             : "opacity-0"
         }`}
       >
