@@ -1,10 +1,12 @@
 import { cls } from "@/utils/utils";
+import Link from "next/link";
 
 interface IProjectSection {
   reversed?: boolean;
   videoSrc: string;
   title: string;
   description?: string;
+  skills: string[];
 }
 
 export default function ProjectSection({
@@ -12,6 +14,7 @@ export default function ProjectSection({
   videoSrc,
   title,
   description = "dd",
+  skills,
 }: IProjectSection) {
   return (
     <section
@@ -32,19 +35,25 @@ export default function ProjectSection({
         </article>
       </div>
       <div
-        className={`absolute top-1/2 ${
+        className={cls(
+          "absolute top-2/3 z-10 bg-base-300 bg-opacity-70 max-w-3xl p-5 rounded-lg flex flex-col gap-3",
           reversed ? "right-1/3" : "left-1/3"
-        } z-10 bg-base-300 bg-opacity-50 max-w-3xl p-5 rounded-lg`}
+        )}
       >
-        <h2 className="font-extrabold text-2xl text-title">{title}</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          itaque hic molestias maiores eius a recusandae aperiam cumque totam
-          omnis neque saepe eaque sint distinctio aspernatur expedita, voluptate
-          adipisci animi, tenetur dolores. Enim ducimus magnam voluptates
-          officia incidunt tempore harum omnis quod impedit accusantium totam
-          hic minima corrupti, reprehenderit exercitationem.
-        </p>
+        <h2 className="font-extrabold text-3xl text-title">{title}</h2>
+        <h3 className="font-semibold text-xl">
+          Using :
+          {skills.map((skill, index) => (
+            <span key={index} className="ml-2">
+              {skill} /
+            </span>
+          ))}
+          <span className="ml-2">and more...</span>
+        </h3>
+        <p>{description}</p>
+        <Link href="/posts/category/front/dd">
+          <button className="btn btn-outline">Go To Detail</button>
+        </Link>
       </div>
     </section>
   );
