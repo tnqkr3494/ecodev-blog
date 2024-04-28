@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Project() {
   return (
-    <main className="py-56 px-20 flex flex-col gap-72">
+    <main className="py-56 px-20 flex flex-col gap-96">
       <ProejectSection
         title="Movie Site"
         imgSrc="/project1.png"

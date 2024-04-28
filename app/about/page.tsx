@@ -15,7 +15,7 @@ export default function AboutMe() {
       <div id="about" className="pt-40 px-20 w-full">
         <h1 className="text-6xl mb-20 font-extrabold">About Me</h1>
         <section className="flex items-center">
-          <div className="max-w-4xl flex">
+          <div className="max-w-4xl flex items-center">
             <div className="flex flex-col border-r-2 pr-6 items-center gap-3">
               <img src="/imo.png" alt="avatar" className="rounded-full" />
               <span className="text-[0.5rem]">MBTI : INTJ</span>
