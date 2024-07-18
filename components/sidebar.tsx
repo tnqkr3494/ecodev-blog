@@ -14,7 +14,7 @@ export default function Sidebar() {
           viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <path d="M0 0h32v32H0z" />
 
             <path
