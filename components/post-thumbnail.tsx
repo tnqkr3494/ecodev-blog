@@ -1,9 +1,32 @@
-export default function Thumbnail() {
+// components/post-thumbnail/index.tsx
+
+interface IThumbnailProps {
+  title: string;
+  createdAt: string;
+  lastEditedTime: string;
+  thumbnailImg: string;
+}
+
+export default function Thumbnail({
+  title,
+  createdAt,
+  lastEditedTime,
+  thumbnailImg,
+}: IThumbnailProps) {
   return (
-    <div className="w-full">
-      <img src="/img1.png"></img>
-      <h3 className="font-semibold text-2xl text-title">title - tag[]</h3>
-      <span>2001.08.20</span>
+    <div className="rounded-lg overflow-hidden shadow-md hover:scale-110 transition-transform ease-in-out">
+      <img
+        src={thumbnailImg}
+        alt={title}
+        className="w-full h-64 object-cover rounded-lg object-center p-4"
+      />
+      <div className="p-4">
+        <h3 className="font-semibold text-lg text-title">{title}</h3>
+        <div className="flex flex-col text-sm text-gray-600 mt-2">
+          <span>작성일: {createdAt}</span>
+          <span>최근 수정일: {lastEditedTime}</span>
+        </div>
+      </div>
     </div>
   );
 }
