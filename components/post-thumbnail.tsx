@@ -14,7 +14,7 @@ export default function Thumbnail({
   thumbnailImg,
 }: IThumbnailProps) {
   return (
-    <div className="rounded-lg overflow-hidden shadow-md hover:scale-110 transition-transform ease-in-out">
+    <div className="rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform ease-in-out">
       <img
         src={thumbnailImg}
         alt={title}

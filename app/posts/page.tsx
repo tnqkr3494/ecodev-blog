@@ -1,4 +1,5 @@
 import Thumbnail from "@/components/post-thumbnail";
+import Toggle from "@/components/toggle";
 import { getData } from "@/utils/notion";
 import Link from "next/link";
 
@@ -45,6 +46,7 @@ export default async function Posts() {
         });
       }
     });
+    childPages.sort((a, b) => (a.createdAt > b.createdAt ? -1 : 1));
 
     return childPages;
   };
@@ -52,9 +54,11 @@ export default async function Posts() {
   const childPages = getChildPageDetails(data);
 
   return (
-    <div className="mt-32 pl-5 pr-5 md:pl-24 md:pr-24 mx-auto">
-      <h1 className="font-extrabold text-6xl text-title">전체 포스트</h1>
-      <div className="flex flex-wrap gap-4 md:gap-8">
+    <div className="mt-32 pl-5 md:pl-24  mx-auto">
+      <div className="flex gap-8">
+        <h1 className="font-extrabold text-5xl text-title">전체 포스트</h1>
+      </div>
+      <div className="flex flex-wrap">
         {childPages.map((page) => (
           <div key={page.id} className="w-full md:w-1/4 p-2">
             <Link href={`/posts/category/front/${page.id}`}>
