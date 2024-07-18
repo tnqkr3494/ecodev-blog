@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
+    "@notionhq/client": "^2.2.15",
     "@react-three/drei": "^9.102.6",
     "@react-three/fiber": "^8.15.19",
     "@types/three": "^0.162.0",
