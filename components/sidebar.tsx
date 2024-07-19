@@ -1,42 +1,36 @@
 import Link from "next/link";
+import { FaBook, FaBrain, FaDatabase, FaHtml5 } from "react-icons/fa";
+import { FaComputer } from "react-icons/fa6";
 
 export default function Sidebar() {
   return (
     <div className="top-[10.5rem] fixed flex flex-col items-center gap-10 pl-4 text-center">
       <Link href="/posts/category/front">
-        <img src="/html.svg" className="w-10 h-10" />
-        <span>front</span>
+        <FaHtml5 className="size-10" />
+        <span className="font-semibold">front</span>
       </Link>
 
       <Link href="/posts/category/back">
-        <svg
-          className="w-10 h-10"
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g fill="none" fillRule="evenodd">
-            <path d="M0 0h32v32H0z" />
-
-            <path
-              fill="black"
-              d="M5.466 27.993c.586.473 1.446.385 1.918-.202.475-.585.386-1.445-.2-1.92-.585-.474-1.444-.383-1.92.202-.45.555-.392 1.356.115 1.844l-.266-.234C1.972 24.762 0 20.597 0 15.978 0 7.168 7.168 0 15.98 0c4.48 0 8.53 1.857 11.435 4.836.66-.898 1.232-1.902 1.7-3.015 2.036 6.118 3.233 11.26 2.795 15.31-.592 8.274-7.508 14.83-15.93 14.83-3.912 0-7.496-1.416-10.276-3.757l-.238-.21zm23.58-4.982c4.01-5.336 1.775-13.965-.085-19.48-1.657 3.453-5.738 6.094-9.262 6.93-3.303.788-6.226.142-9.283 1.318-6.97 2.68-6.86 10.992-3.02 12.86.002 0 .23.124.227.12 0-.002 5.644-1.122 8.764-2.274 4.56-1.684 9.566-5.835 11.213-10.657-.877 5.015-5.182 9.84-9.507 12.056-2.302 1.182-4.092 1.445-7.88 2.756-.464.158-.828.314-.828.314.96-.16 1.917-.212 1.917-.212 5.393-.255 13.807 1.516 17.745-3.73z"
-            />
-          </g>
-        </svg>
-        <span>back</span>
+        <FaDatabase className="size-10" />
+        <span className="font-semibold">back</span>
       </Link>
 
       <Link href="/posts/category/cs">
-        <img src="/cs.svg" className="w-10 h-10" />
-        <span>CS</span>
+        <FaComputer className="size-10" />
+        <span className="font-semibold">CS</span>
       </Link>
 
       <Link
         href="/posts/category/algorithm"
         className="flex flex-col items-center"
       >
-        <img src="/algorithm.svg" className="w-10 h-10" />
-        <span>algorithm</span>
+        <FaBrain className="size-10" />
+
+        <span className="font-semibold">algorithm</span>
+      </Link>
+      <Link href="/posts/category/etc" className="flex flex-col items-center">
+        <FaBook className="w-10 h-10" />
+        <span className="font-semibold">ETC</span>
       </Link>
     </div>
   );

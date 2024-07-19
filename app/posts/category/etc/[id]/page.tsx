@@ -1,9 +1,7 @@
 import Renderer from "@/components/notion-renderer";
 import { getData } from "@/utils/notion";
-import "react-notion-x/src/styles.css";
-import "prismjs/themes/prism-tomorrow.css";
 
-export default async function FrontDetail({
+export default async function ETCDetail({
   params,
 }: {
   params: { id: string };

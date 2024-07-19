@@ -36,6 +36,9 @@ export default function Header() {
                   <li>
                     <Link href="/posts/category/algorithm">Algorithm</Link>
                   </li>
+                  <li>
+                    <Link href="/posts/category/etc">ETC</Link>
+                  </li>
                 </ul>
               </details>
             </li>
