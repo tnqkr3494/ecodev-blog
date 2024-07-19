@@ -13,26 +13,37 @@ export default async function Posts({
   const data = await getData(id);
   const childPages = getChildPageDetails(data);
   return (
-    <div className="mt-32 pl-5 md:pl-24  mx-auto">
-      <div className="flex gap-8">
-        <h1 className="font-extrabold text-5xl text-title">{title}</h1>
-      </div>
-      <div className="flex flex-wrap">
-        {childPages.map((page) => (
-          <div key={page.id} className="w-full md:w-1/4 p-4">
-            <Link href={`/posts/category/front/${page.id}`}>
-              <Thumbnail
-                title={page.title}
-                createdAt={new Date(page.createdAt).toLocaleDateString()}
-                lastEditedTime={new Date(
-                  page.lastEditedTime
-                ).toLocaleDateString()}
-                thumbnailImg={page.thumbnail}
-              />
-            </Link>
+    <div className="mt-32 pl-[144px] md:pl-[144px] mx-auto">
+      {childPages.length === 0 ? (
+        <div className="ml-4">
+          <div className="flex">
+            <h1 className="font-extrabold text-5xl text-title">{title}</h1>
           </div>
-        ))}
-      </div>
+          <p className="mt-8 font-semibold">포스트가 비었습니다.</p>
+        </div>
+      ) : (
+        <>
+          <div className="flex gap-8">
+            <h1 className="font-extrabold text-5xl text-title ml-4">{title}</h1>
+          </div>
+          <div className="flex flex-wrap">
+            {childPages.map((page) => (
+              <div key={page.id} className="w-full md:w-1/4 p-4">
+                <Link href={`/posts/category/front/${page.id}`}>
+                  <Thumbnail
+                    title={page.title}
+                    createdAt={new Date(page.createdAt).toLocaleDateString()}
+                    lastEditedTime={new Date(
+                      page.lastEditedTime
+                    ).toLocaleDateString()}
+                    thumbnailImg={page.thumbnail}
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }
