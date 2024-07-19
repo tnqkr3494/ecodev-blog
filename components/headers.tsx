@@ -22,9 +22,6 @@ export default function Header() {
                 <summary>Posts</summary>
                 <ul className="p-2 bg-base-100 rounded-t-none">
                   <li>
-                    <Link href="/posts">All</Link>
-                  </li>
-                  <li>
                     <Link href="/posts/category/front">front</Link>
                   </li>
                   <li>
