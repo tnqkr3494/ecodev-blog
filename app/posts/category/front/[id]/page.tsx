@@ -2,6 +2,7 @@ import Renderer from "@/components/notion-renderer";
 import { getData } from "@/utils/notion";
 import "react-notion-x/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
+import "../../../../assets/notion-change.css";
 
 export default async function FrontDetail({
   params,

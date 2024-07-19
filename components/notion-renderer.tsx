@@ -27,6 +27,7 @@ export const Renderer = ({ recordMap, rootPageId }: RendererProps) => {
         recordMap={recordMap}
         darkMode={false}
         rootPageId={rootPageId}
+        fullPage={true}
         previewImages
         components={{
           Code,
