@@ -1,0 +1,23 @@
+.notion-page-has-cover.notion-page-no-icon {
+  padding-top: 0;
+}
+
+.notion-app {
+  background-color: transparent;
+}
+
+.notion-header {
+  display: none;
+}
+
+.notion-page-cover-wrapper {
+  display: none;
+}
+
+.notion-full-page {
+  padding-bottom: 0;
+}
+
+.notion-collection-page-properties {
+  display: none;
+}
