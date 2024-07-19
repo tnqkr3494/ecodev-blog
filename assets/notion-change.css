@@ -21,3 +21,7 @@
 .notion-collection-page-properties {
   display: none;
 }
+
+.notion-bookmark > div:first-child {
+  color: inherit;
+}
