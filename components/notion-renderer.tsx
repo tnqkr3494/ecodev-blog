@@ -22,7 +22,7 @@ const Collection = dynamic(() =>
 
 export const Renderer = ({ recordMap, rootPageId }: RendererProps) => {
   return (
-    <div className="notion__container">
+    <div className="notion__container border-b-2 pb-8 flex flex-col items-center">
       <NotionRenderer
         recordMap={recordMap}
         darkMode={true}
@@ -36,6 +36,9 @@ export const Renderer = ({ recordMap, rootPageId }: RendererProps) => {
           Collection,
         }}
       />
+      <p className="mt-10 font-semibold text-xl">
+        틀린 부분이 있거나 질문이 있으시면 아래 댓글로 남겨주세요 👍
+      </p>
     </div>
   );
 };

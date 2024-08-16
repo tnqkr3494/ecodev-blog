@@ -1,3 +1,7 @@
+.notion {
+  color: inherit;
+}
+
 .notion-page-has-cover.notion-page-no-icon {
   padding-top: 0;
 }
@@ -10,6 +14,11 @@
   display: none;
 }
 
+.notion-title {
+  display: inline-block;
+  color: skyblue;
+}
+
 .notion-page-cover-wrapper {
   display: none;
 }
@@ -20,8 +29,4 @@
 
 .notion-collection-page-properties {
   display: none;
-}
-
-.notion-bookmark > div:first-child {
-  color: inherit;
 }

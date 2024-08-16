@@ -11,9 +11,9 @@ export default function PostsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <>
       <Sidebar />
       {children}
-    </div>
+    </>
   );
 }

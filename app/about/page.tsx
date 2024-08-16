@@ -94,8 +94,8 @@ export default function AboutMe() {
                 name="python"
               />
               <IconCirlce
-                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-                name="java"
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
+                name="dart"
               />
               <IconCirlce
                 link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
@@ -129,6 +129,10 @@ export default function AboutMe() {
                 name="NextJS"
               />
               <IconCirlce
+                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+                name="flutter"
+              />
+              <IconCirlce
                 link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
                 name="tailwind"
               />
@@ -139,10 +143,6 @@ export default function AboutMe() {
               <IconCirlce
                 link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg"
                 name="vercel"
-              />
-              <IconCirlce
-                link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
-                name="spring"
               />
               <IconCirlce
                 link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
