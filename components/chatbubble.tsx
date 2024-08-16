@@ -44,7 +44,7 @@ export default function ChatBubble() {
           </div>
         </div>
         <div className="chat-bubble">
-          주로 NextJS로 연습중이고, 백엔드 개발을 위해 java와 spring을 새롭게
+          주로 NextJS로 연습중이고, 앱 개발을 위해 dart와 flutter를 새롭게
           공부하고있습니다.
         </div>
       </div>

@@ -27,7 +27,7 @@ const GiscusComments = () => {
     }
   }, []);
 
-  return <div id="giscus-container" />;
+  return <div id="giscus-container" className="w-[720px]" />;
 };
 
 export default GiscusComments;
