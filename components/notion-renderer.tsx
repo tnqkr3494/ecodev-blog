@@ -25,7 +25,7 @@ export const Renderer = ({ recordMap, rootPageId }: RendererProps) => {
     <div className="notion__container">
       <NotionRenderer
         recordMap={recordMap}
-        darkMode={false}
+        darkMode={true}
         rootPageId={rootPageId}
         fullPage={true}
         previewImages

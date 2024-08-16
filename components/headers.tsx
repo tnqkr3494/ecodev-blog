@@ -39,9 +39,6 @@ export default function Header() {
                 </ul>
               </details>
             </li>
-            <li>
-              <Link href="/others">잡동사니</Link>
-            </li>
           </ul>
         </div>
       </div>
