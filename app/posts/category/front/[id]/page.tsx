@@ -11,6 +11,7 @@ export default async function FrontDetail({
   params: { id: string };
 }) {
   const data = await getData(params.id);
+
   return (
     <main className="py-36 pl-[256px] pr-36 flex flex-col items-center gap-8">
       <Renderer recordMap={data} rootPageId={params.id} />
