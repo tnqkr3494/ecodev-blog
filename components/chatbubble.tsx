@@ -1,4 +1,4 @@
-import Image from "next/image";
+import img from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function ChatBubble() {
@@ -26,7 +26,7 @@ export default function ChatBubble() {
       >
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
-            <Image alt="Tailwind CSS chat bubble component" src="/kang.png" />
+            <img alt="Tailwind CSS chat bubble component" src="/kang.png" />
           </div>
         </div>
         <div className="chat-bubble">
@@ -42,7 +42,7 @@ export default function ChatBubble() {
       >
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
-            <Image alt="Tailwind CSS chat bubble component" src="/kang.png" />
+            <img alt="Tailwind CSS chat bubble component" src="/kang.png" />
           </div>
         </div>
         <div className="chat-bubble">
@@ -59,7 +59,7 @@ export default function ChatBubble() {
       >
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
-            <Image alt="Tailwind CSS chat bubble component" src="/kang.png" />
+            <img alt="Tailwind CSS chat bubble component" src="/kang.png" />
           </div>
         </div>
         <div className="chat-bubble">

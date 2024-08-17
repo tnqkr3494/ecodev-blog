@@ -1,4 +1,4 @@
-import Image from "next/image";
+import img from "next/image";
 
 interface ICircle {
   link: string;
@@ -11,7 +11,7 @@ export default function IconCirlce({ link, name }: ICircle) {
       className="bg-card p-2 rounded-md hover:scale-125 transition-transform tooltip"
       data-tip={name}
     >
-      <Image src={link} alt="circle" className="w-14 h-14" />
+      <img src={link} alt="circle" className="w-14 h-14" />
     </li>
   );
 }
