@@ -19,11 +19,10 @@ export default function Life() {
           </div>
           <div className="timeline-start md:text-end mb-10">
             <time className="font-mono italic">2001</time>
-            <div className="text-lg font-black">"나" 탄생</div>
+            <div className="text-lg font-black">탄생</div>
             <span className="text-title text-xl font-extrabold">
               2001.08.20
             </span>{" "}
-            제주에서 많은 가족들의 기대 속에서 첫째아들로 태어났다.
             <br />
             친구들과 놀러다니는 것을 좋아했고 집에 들어가는 것이 싫었다.
             부모님께 연락도 없이 놀러다닌 적도 많아 혼도 많이 났었다. 이 때의
@@ -85,7 +84,7 @@ export default function Life() {
             <br />
             우연한 계기로 담임선생님이
             <span className="italic">
-              "한 IT컨퍼런스에 참여해보는 것이 어떠냐?"
+              &quot;한 IT컨퍼런스에 참여해보는 것이 어떠냐?&quot;
             </span>{" "}
             라는 추천을 해주셨고 이 과정에서 나의 미래가 바뀌기 시작한다. 그
             곳에서 여러 IT종사자 분들을 만나고, 배우며 프로그래밍의 세계에 눈을
