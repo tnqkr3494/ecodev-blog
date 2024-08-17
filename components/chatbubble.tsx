@@ -61,7 +61,8 @@ export default function ChatBubble() {
           </div>
         </div>
         <div className="chat-bubble">
-          다음으로 저의 일대기를 소개해드리겠습니다.
+          제가 한 프로젝트들이 궁금하시면 프로젝트 페이지나 깃허브 링크로
+          이동해주세요!
         </div>
       </div>
     </div>
