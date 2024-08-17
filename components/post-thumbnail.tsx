@@ -1,5 +1,7 @@
 // components/post-thumbnail/index.tsx
 
+import Image from "next/image";
+
 interface IThumbnailProps {
   title: string;
   createdAt: string;
@@ -15,7 +17,7 @@ export default function Thumbnail({
 }: IThumbnailProps) {
   return (
     <div className="rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform ease-in-out">
-      <img
+      <Image
         src={thumbnailImg}
         alt={title}
         className="w-full h-64 object-cover rounded-lg object-center p-4"
