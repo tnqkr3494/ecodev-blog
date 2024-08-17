@@ -1,5 +1,3 @@
-// components/post-thumbnail/index.tsx
-
 interface IThumbnailProps {
   title: string;
   createdAt: string;

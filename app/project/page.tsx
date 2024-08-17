@@ -5,43 +5,65 @@ export default function Project() {
   return (
     <main className="py-56 md:py-56 px-4 md:px-20 flex flex-col gap-32 md:gap-32">
       <ProejectSection
-        title="Movie Site"
-        imgSrc="/project1.png"
-        codeSrc="https://github.com/tnqkr3494/ReactJs-ms/tree/460c7b204a97262ca935d9a398e7c6e91f7f8f22"
-        skills={["react", "styled-component", "react-router", "framer-motion"]}
-        description="react를 본격적으로 배우면서 해본 프로젝트. react-router의 사용방법을 익힐 수 있었고, styled-component와 framer-motion
-        의 조합으로 interactive한 사이트를 제작해 볼 수 있었다. 또한 api를 이용하는 방법으로 여러 영화들의 정보들을 불러와서 사이트 제작을
-        하였다."
+        title="당뇨병 환자를 위한 건강식 간편 구독서비스"
+        imgSrc="/diabetes.png"
+        codeSrc="https://github.com/likelion-onetool/diabetes-frontend"
+        detailSrc="https://jelly-textbook-0b1.notion.site/9137b6d344f4417580624e5788da118b"
+        skills={[
+          "React",
+          "TypeScript",
+          "styled-component",
+          "react-router",
+          "react-query",
+        ]}
+        description="멋대 12기 중앙 해커톤 주제로 팀을 꾸려 나간 프로젝트. 
+        당뇨병 환자들을 위한 건강도시락 판매 사이트를 제작하였다. 중간에 서버가 다운되고,
+        백엔드와의 연결할 때 cors문제, api에서 문제들이 생겨서 고전하였지만 팀원들이 서로 포기하지 않고
+        열심히 해주어서 끝까지 잘 마무리 할 수 있었다.
+        "
       />
       <ProejectSection
-        title="ToDo List"
-        imgSrc="/project2.png"
-        codeSrc="https://github.com/tnqkr3494/ReactJs-ms/tree/8bf9b60da778a54104762cd991a7038e942a37b3"
+        title="그녀를 구해라!"
+        imgSrc="/hackerton.png"
+        codeSrc="https://github.com/bagle-ggul/bagleFront"
+        detailSrc="https://jelly-textbook-0b1.notion.site/PROJECT-1ce5beaadbb449269210fd41de5c4272"
         reversed={true}
-        skills={["react", "styled-component", "recoil", "beautiful-dnd"]}
-        description="react-beautiful-dnd라는 라이브러리를 이용하여 애니메이션이 있는 todo리스트를 만들어 보았다.
-        여러 컴포넌트들을 만들게 되면서 변수들을 관리해야 할 필요성을 느꼈고 redux대신 좀 더 가볍고 쉬운 recoil을 사용하여 처리하였다.
-        개인적으로 가장 복잡했던 프로젝트였던 것 같다."
+        skills={[
+          "react",
+          "JavaScript",
+          "styled-component",
+          "recoil",
+          "react-router",
+        ]}
+        description="세종대학교 소프트웨어융합대학 주관 해커톤에서 우리팀이 선정한 프로젝트.
+        *미연시 즉 미소녀 연애 시뮬레이션을 주제로 게임을 플레이할 수 있는 사이트를 제작하였다.
+        하루만에 완성해야되는 프로젝트였고, 주제가 게임이다 보니 로직이 굉장히 복잡해져서 버그를
+        수정하는데 굉장한 노력을 많이했다.
+        "
       />
       <ProejectSection
-        title="Carrot-Market"
-        imgSrc="/project3.png"
-        codeSrc="https://github.com/tnqkr3494/carrot-market"
-        skills={["NextJS", "tailwind", "prisma", "planetscale"]}
-        description="NextJS12버전을 사용하면서 만들었던 프로젝트. 강의를 들으면서 천천히 이해하고 복습해가며 만들었다.
-        E-Commerce사이트를 직접 구현해보면서 백엔드 동작까지 Next의 도움으로 맛볼 수 있었다.
-        이 프로젝트를 통해 NextJS와 사랑에 빠지게 되었다....❤️. 개인적으로 프론트엔드 개발에 더욱 흥미를 느끼고, 자신감도 생길 수 있게 해준 프로젝트."
+        title="My Blog"
+        imgSrc="/blog.png"
+        codeSrc="https://github.com/tnqkr3494/ecodev-blog"
+        detailSrc="https://jelly-textbook-0b1.notion.site/62e747a4ad1846a8ac4e2f87ad60f1e4"
+        skills={["NextJS", "TypeScript", "tailwind", "DaisyUI", "vercel"]}
+        description="velog, tistory와 같은 블로그를 제작할 수 있는 사이트는 여럿 있지만 
+        커스터마이징하는 부분에서 한계를 느꼈고, 또한 내가 그동안 공부했던 기술들을 이용해서 나의
+        상상력을 펼칠 수 있는 기회를 만들고 싶어서 이 프로젝트를 기획했다.
+        "
       />
       <ProejectSection
-        title="CSS Practice"
-        imgSrc="/project4.png"
-        codeSrc="https://github.com/tnqkr3494/Css-practice"
+        title="Nostalgia Films"
+        imgSrc="/nostalgia.png"
+        codeSrc="https://github.com/tnqkr3494/db_course"
+        detailSrc="https://jelly-textbook-0b1.notion.site/Nostalgia-Films-11799c9ad9524cca88a68fedd580f653"
         reversed={true}
-        skills={["HTML", "CSS", "JS"]}
-        description="react, NextJS, 기타 라이브러리들을 배우기 급급하여 기본기가 부족함을 느꼈다.
-        다시 초심으로 돌아가 여러 영상, 사이트를 둘러보며 기본기 연습을 하였다.
-        내가 부족했던 부분, 몰랐던 부분들을 되짚어 볼 수 있었던 계기가 되었다.
-        튜닝의 끝은 순정..."
+        skills={["React", "TypeScript", "Express", "MSSQL"]}
+        description="학교 데이터베이스 과목 수업에서 SQL을 이용한 프로젝트를 구상했었다.
+        그 과정에서 SQL 쿼리문을 만드는데 그치지 않고, 나의 전공인 프론트엔드를 살려서 그대로
+        express를 이용해서 프론트와 db를 연결시켰다. 사이트의 기능 및 내용은 고전 명화들의 정보를 볼 수 있고,
+        가상의 영화관의 티켓을 구매할 수 있도록 해서 예매하는 과정까지 구현해 보았다.
+        "
       />
       <section className="flex flex-col items-center gap-16 mt-12 md:mt-32">
         <div className="w-16 h-16 rounded-full bg-base-300"></div>

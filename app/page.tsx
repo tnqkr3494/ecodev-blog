@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -8,11 +9,15 @@ export default function Home() {
         className="h-screen flex flex-col items-center justify-center relative"
       >
         <div className="relative z-10 text-center px-6 md:px-12 top-10">
-          <img
-            src="/kang.png"
-            alt="Logo"
-            className="w-40 h-40 md:w-60 md:h-60 mx-auto mb-6 rounded-full border-4 border-transparent animate-borderAnimation shadow-lg"
-          />
+          <div className="mx-auto mb-6 w-40 h-40 md:w-60 md:h-60 rounded-full border-4 border-transparent animate-borderAnimation shadow-lg">
+            <Image
+              src="/kang.png"
+              alt="Logo"
+              width={240} // 40 * 6
+              height={240} // 40 * 6
+              className="rounded-full"
+            />
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-4">
             Welcome to my blog
           </h1>

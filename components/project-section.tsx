@@ -1,6 +1,7 @@
 "use client";
 
 import { cls } from "@/utils/utils";
+import Image from "next/image";
 import img from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -9,6 +10,7 @@ interface IProjectSection {
   reversed?: boolean;
   imgSrc: string;
   codeSrc: string;
+  detailSrc: string;
   title: string;
   description?: string;
   skills: string[];
@@ -19,6 +21,7 @@ export default function ProjectSection({
   imgSrc,
   codeSrc,
   title,
+  detailSrc,
   description = "dd",
   skills,
 }: IProjectSection) {
@@ -52,7 +55,16 @@ export default function ProjectSection({
     >
       <div className="w-full md:w-[45rem] shadow-xl relative">
         <article>
-          <img src={imgSrc} alt="project" className="rounded-lg w-full" />
+          <div className="w-full rounded-lg">
+            <Image
+              src={imgSrc}
+              alt="project"
+              layout="responsive"
+              width={700}
+              height={475}
+              className="rounded-lg"
+            />
+          </div>
         </article>
       </div>
       <div
@@ -75,10 +87,10 @@ export default function ProjectSection({
         </h3>
         <p className="text-sm md:text-base">{description}</p>
         <div className="flex flex-row gap-3">
-          <Link href="/posts/category/front/dd">
+          <Link href={detailSrc} target="_blank">
             <button className="btn btn-outline">Go To Detail</button>
           </Link>
-          <Link href={codeSrc}>
+          <Link href={codeSrc} target="_blank">
             <button className="btn btn-outline">Code</button>
           </Link>
         </div>
