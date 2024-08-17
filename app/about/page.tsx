@@ -12,7 +12,6 @@ import Life from "@/components/lifetime";
 import Link from "next/link";
 import IconCirlce from "@/components/circle";
 import ChatBubble from "@/components/chatbubble";
-import img from "next/image";
 
 export default function AboutMe() {
   return (
