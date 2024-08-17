@@ -4,7 +4,7 @@ import { FaComputer } from "react-icons/fa6";
 
 export default function Sidebar() {
   return (
-    <div className="fixed top-0 left-0 w-32 flex flex-col items-center justify-center gap-6 px-4 text-center py-8 border-r-[1px] h-screen z-40 bg-base-100">
+    <div className="md:fixed md:top-0 md:left-0 md:w-32 md:flex md:flex-col md:items-center md:justify-center md:gap-6 md:px-4 md:text-center md:py-8 md:border-r-[1px] md:h-screen md:z-40 md:bg-base-100 hidden">
       <Link
         href="/posts/category/front"
         className="group flex flex-col items-center transition-all duration-200 hover:text-white hover:bg-gray-700 p-2 rounded-md"

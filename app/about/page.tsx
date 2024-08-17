@@ -16,20 +16,26 @@ import ChatBubble from "@/components/chatbubble";
 export default function AboutMe() {
   return (
     <>
-      <div id="about" className="pt-40 px-20 w-full">
-        <h1 className="text-6xl mb-20 font-extrabold">About Me</h1>
-        <section className="flex items-center">
-          <div className="max-w-4xl flex items-center">
-            <div className="flex flex-col border-r-2 pr-6 items-center gap-3">
-              <img src="/imo.png" alt="avatar" className="rounded-full" />
-              <div className="flex flex-col items-center">
+      <div id="about" className="pt-40 px-4 md:px-20 w-full">
+        <h1 className="text-4xl md:text-6xl mb-4 md:mb-20 font-extrabold md:text-start text-center">
+          About Me
+        </h1>
+        <section className="flex flex-col md:flex-row items-center">
+          <div className="max-w-4xl flex flex-col md:flex-row items-center md:items-start">
+            <div className="flex flex-col items-center border-r-0 mb-8 md:mb-0 md:pr-12 md:border-r-2">
+              <img
+                src="/imo.png"
+                alt="avatar"
+                className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover"
+              />
+              <div className="flex flex-col items-center mt-4">
                 <span className="font-semibold text-xl">강인권 / EcoDev</span>
                 <span className="text-xs">Front-End Developer</span>
                 <span className="font-extrabold text-title text-xs mt-2">
-                  Work in sejong Univ.
+                  Work in Sejong Univ.
                 </span>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 mt-4">
                 <Link href="/">
                   <HomeIcon className="w-8 h-8 text-title" />
                 </Link>
@@ -53,7 +59,7 @@ export default function AboutMe() {
                 </Link>
               </div>
             </div>
-            <p className="pl-8 text-xl">
+            <p className="text-lg md:text-xl md:pl-8">
               Hello✋ I am a front-end engineer who is working under the
               nickname <span>EcoDev</span>. I am studying while dreaming of
               becoming a{" "}
@@ -63,14 +69,14 @@ export default function AboutMe() {
               in the future.
               <br />
               <br /> I am creating a website in pursuit of user-friendly
-              features, designs. And I feel rewarded by implementing the
+              features and designs. And I feel rewarded by implementing the
               behavior of the web front end on my own and seeing it run.
               <br />
               <br />I would like to share various experiences and knowledge with
               various people from now on!
             </p>
           </div>
-          <div className="w-[26rem] h-96">
+          <div className="w-full md:w-[26rem] h-64 md:h-96 mt-8 md:mt-0">
             <Canvas camera={{ position: [-100, 50, 10] }}>
               <OrbitControls />
               <ambientLight intensity={1} />
@@ -80,12 +86,12 @@ export default function AboutMe() {
             </Canvas>
           </div>
         </section>
-        <section className="mt-60 flex flex-col items-center">
+        <section className="mt-12 md:mt-60 flex flex-col items-center">
           <div className="flex flex-col items-center gap-10">
-            <h1 className="text-6xl capitalize font-extrabold">
-              technology stacks that i use
+            <h1 className="text-4xl md:text-6xl capitalize font-extrabold text-center">
+              Technology Stacks That I Use
             </h1>
-            <ul className="flex gap-4">
+            <ul className="flex flex-wrap gap-4 justify-center">
               <IconCirlce
                 link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
                 name="macOS"
@@ -123,7 +129,7 @@ export default function AboutMe() {
                 name="TS"
               />
             </ul>
-            <ul className="flex gap-4">
+            <ul className="flex flex-wrap gap-4 justify-center">
               <IconCirlce
                 link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
                 name="React"
@@ -167,8 +173,11 @@ export default function AboutMe() {
               />
             </ul>
           </div>
-          <div className="flex items-center my-40">
-            <img src="/imo2.png" className="w-64 h-64 mr-20" />
+          <div className="flex flex-col md:flex-row items-center my-20">
+            <img
+              src="/imo2.png"
+              className="w-48 h-48 md:w-64 md:h-64 mr-0 md:mr-20 mb-8 md:mb-0"
+            />
             <ChatBubble />
           </div>
         </section>

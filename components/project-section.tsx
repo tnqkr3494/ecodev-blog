@@ -40,8 +40,8 @@ export default function ProjectSection({
     <section
       ref={ref}
       className={cls(
-        "relative flex flex-wrap",
-        reversed ? "flex-row-reverse" : "",
+        "relative flex flex-col md:flex-row items-center gap-8 md:gap-16",
+        reversed ? "md:flex-row-reverse" : "",
         intersect
           ? reversed
             ? "animate-fade-left animate-delay-100"
@@ -49,19 +49,21 @@ export default function ProjectSection({
           : ""
       )}
     >
-      <div className="w-[45rem] shadow-xl relative">
+      <div className="w-full md:w-[45rem] shadow-xl relative">
         <article>
-          <img src={imgSrc} className="rounded-lg" />
+          <img src={imgSrc} className="rounded-lg w-full" />
         </article>
       </div>
       <div
         className={cls(
-          "absolute top-2/3 z-10 bg-base-300 bg-opacity-70 max-w-3xl p-5 rounded-lg flex flex-col gap-3",
-          reversed ? "right-1/3" : "left-1/3"
+          "bg-base-300 bg-opacity-70 max-w-full md:max-w-lg p-5 rounded-lg flex flex-col gap-3",
+          reversed ? "md:right-1/3" : "md:left-1/3"
         )}
       >
-        <h2 className="font-extrabold text-3xl text-title">{title}</h2>
-        <h3 className="font-semibold text-xl">
+        <h2 className="font-extrabold text-2xl md:text-3xl text-title">
+          {title}
+        </h2>
+        <h3 className="font-semibold text-lg md:text-xl">
           Using :
           {skills.map((skill, index) => (
             <span key={index} className="ml-2">
@@ -70,8 +72,8 @@ export default function ProjectSection({
           ))}
           <span className="ml-2">and more...</span>
         </h3>
-        <p>{description}</p>
-        <div className="flex gap-3">
+        <p className="text-sm md:text-base">{description}</p>
+        <div className="flex flex-row gap-3">
           <Link href="/posts/category/front/dd">
             <button className="btn btn-outline">Go To Detail</button>
           </Link>
