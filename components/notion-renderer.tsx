@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Image from "next/image";
+import img from "next/image";
 import Link from "next/link";
 import { NotionRenderer } from "react-notion-x";
 
@@ -28,10 +28,10 @@ export const Renderer = ({ recordMap, rootPageId }: RendererProps) => {
         darkMode={true}
         rootPageId={rootPageId}
         fullPage={true}
-        previewImages
+        previewimgs
         components={{
           Code,
-          nextImage: Image,
+          nextimg: img,
           nextLink: Link,
           Collection,
         }}

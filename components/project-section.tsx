@@ -1,7 +1,7 @@
 "use client";
 
 import { cls } from "@/utils/utils";
-import Image from "next/image";
+import img from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -52,7 +52,7 @@ export default function ProjectSection({
     >
       <div className="w-full md:w-[45rem] shadow-xl relative">
         <article>
-          <Image src={imgSrc} alt="project" className="rounded-lg w-full" />
+          <img src={imgSrc} alt="project" className="rounded-lg w-full" />
         </article>
       </div>
       <div
