@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
@@ -6,7 +7,11 @@ export default function Header() {
       <div className="navbar">
         <div className="flex-1">
           <Link href="/" className="btn btn-ghost bg-white">
-            <img src="/logo-no-background.png" className="w-full h-full"></img>
+            <Image
+              src="/logo-no-background.png"
+              alt="logo-no-background"
+              className="w-full h-full"
+            />
           </Link>
         </div>
         <ul className="md:hidden menu lg:menu-horizontal bg-base-100 rounded-box lg:mb-64 font-semibold">
