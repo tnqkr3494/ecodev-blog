@@ -12,6 +12,7 @@ import Life from "@/components/lifetime";
 import Link from "next/link";
 import IconCirlce from "@/components/circle";
 import ChatBubble from "@/components/chatbubble";
+import Image from "next/image";
 
 export default function AboutMe() {
   return (
@@ -23,11 +24,15 @@ export default function AboutMe() {
         <section className="flex flex-col md:flex-row items-center">
           <div className="max-w-4xl flex flex-col md:flex-row items-center md:items-start">
             <div className="flex flex-col items-center border-r-0 mb-8 md:mb-0 md:pr-12 md:border-r-2">
-              <img
-                src="/imo.png"
-                alt="avatar"
-                className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover"
-              />
+              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full flex justify-center items-center">
+                <Image
+                  src="/imo.png"
+                  alt="avatar"
+                  width={200}
+                  height={200}
+                  className="rounded-full object-cover"
+                />
+              </div>
               <div className="flex flex-col items-center mt-4">
                 <span className="font-semibold text-xl">강인권 / EcoDev</span>
                 <span className="text-xs">Front-End Developer</span>
@@ -174,11 +179,15 @@ export default function AboutMe() {
             </ul>
           </div>
           <div className="flex flex-col md:flex-row items-center my-20">
-            <img
-              src="/imo2.png"
-              alt="imo2"
-              className="w-48 h-48 md:w-64 md:h-64 mr-0 md:mr-20 mb-8 md:mb-0"
-            />
+            <div className="w-48 h-48 md:w-64 md:h-64 mr-0 md:mr-20 mb-8 md:mb-0">
+              <Image
+                src="/imo2.png"
+                alt="imo2"
+                width={200}
+                height={200}
+                className="object-cover" // If object-cover is needed for the image
+              />
+            </div>
             <ChatBubble />
           </div>
         </section>

@@ -1,4 +1,4 @@
-import img from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
@@ -7,10 +7,11 @@ export default function Header() {
       <div className="navbar">
         <div className="flex-1">
           <Link href="/" className="btn btn-ghost bg-white">
-            <img
+            <Image
               src="/logo-no-background.png"
               alt="logo-no-background"
-              className="w-full h-full"
+              width={70}
+              height={70}
             />
           </Link>
         </div>
