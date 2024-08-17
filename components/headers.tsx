@@ -5,8 +5,8 @@ export default function Header() {
     <header className="flex justify-between text-2xl fixed top-0 w-full px-20 py-3 z-50  bg-base-100 border-b-[1px] shadow-md">
       <div className="navbar">
         <div className="flex-1">
-          <Link href="/" className="btn btn-ghost text-xl font-extrabold">
-            Home
+          <Link href="/" className="btn btn-ghost bg-white">
+            <img src="/logo-no-background.png" className="w-full h-full"></img>
           </Link>
         </div>
         <div className="flex-none">

@@ -3,34 +3,39 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <section id="welcome" className="px-20">
-        <div className="flex flex-wrap items-center justify-around">
-          <div className="h-screen flex flex-col justify-center items-baseline font-extrabold">
-            <h1 className=" text-9xl animate-fade-up animate-ease-linear ">
-              Hello
-            </h1>
-            <h3 className="text-6xl animate-fade-up animate-ease-linear animate-delay-700">
-              Welcome to my blog
-              <span>✌🏻</span>
-            </h3>
-            <div className="flex gap-2 font-extrabold">
-              <Link href="/about">
-                <button className="btn btn-home  text-4xl mt-5 rounded-xl">
-                  About
-                </button>
-              </Link>
-              <Link href="/posts/category/front">
-                <button className="btn btn-home  text-4xl mt-5 rounded-xl">
-                  Posts
-                </button>
-              </Link>
-            </div>
-          </div>
+      <section
+        id="welcome"
+        className="h-screen flex flex-col items-center justify-center relative"
+      >
+        <div className="relative z-10 text-center px-6 md:px-12 top-10">
           <img
             src="/kang.png"
-            alt="avatar"
-            className="w-80 h-80 rounded-full animate-fade-up animate-ease-linear"
+            alt="Logo"
+            className="w-40 h-40 md:w-60 md:h-60 mx-auto mb-6 rounded-full border-4 border-transparent animate-borderAnimation shadow-lg"
           />
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-4">
+            Welcome to my blog
+          </h1>
+          <p className="text-lg md:text-xl mb-8">
+            I think everybody should study ants. They have an amazing four-part
+            philosophy.
+            <br />
+            Never give up, look ahead, stay positive and do all you can.
+            <br />
+            <span className="font-semibold text-accent">-Jim Rohn-</span>
+          </p>
+          <div className="flex justify-center gap-4">
+            <Link href="/about">
+              <button className="btn btn-home border-2 text-xl px-6 py-3 rounded-full transition-all duration-300">
+                About Me
+              </button>
+            </Link>
+            <Link href="/posts/category/front">
+              <button className="btn btn-home border-2 text-xl px-6 py-3 rounded-full transition-all duration-300">
+                Read Posts
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
     </>

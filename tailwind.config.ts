@@ -18,6 +18,18 @@ const config: Config = {
         section2: "#e9edc9",
         card: "#faedcd",
       },
+      keyframes: {
+        borderAnimation: {
+          "0%": { borderColor: "#FF5733" }, // 주황색
+          "25%": { borderColor: "#33FF57" }, // 녹색
+          "50%": { borderColor: "#3357FF" }, // 파란색
+          "75%": { borderColor: "#FF33A6" }, // 핑크색
+          "100%": { borderColor: "#FF5733" }, // 주황색으로 돌아감
+        },
+      },
+      animation: {
+        borderAnimation: "borderAnimation 5s infinite", // 애니메이션 설정
+      },
     },
   },
   plugins: [require("tailwindcss-animated"), require("daisyui")],
