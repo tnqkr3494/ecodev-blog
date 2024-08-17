@@ -28,10 +28,10 @@ export const Renderer = ({ recordMap, rootPageId }: RendererProps) => {
         darkMode={true}
         rootPageId={rootPageId}
         fullPage={true}
-        previewimgs
+        previewImages
         components={{
           Code,
-          nextimg: img,
+          nextImage: img,
           nextLink: Link,
           Collection,
         }}

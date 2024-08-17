@@ -1,4 +1,3 @@
-import img from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function ChatBubble() {

@@ -1,7 +1,5 @@
 // components/post-thumbnail/index.tsx
 
-import img from "next/image";
-
 interface IThumbnailProps {
   title: string;
   createdAt: string;
