@@ -19,7 +19,7 @@ export default function Home() {
                   About
                 </button>
               </Link>
-              <Link href="/posts">
+              <Link href="/posts/category/front">
                 <button className="btn btn-home  text-4xl mt-5 rounded-xl">
                   Posts
                 </button>

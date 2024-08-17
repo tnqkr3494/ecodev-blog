@@ -54,6 +54,7 @@ export default function Project() {
 
         <Link
           href="https://github.com/tnqkr3494"
+          target="_blank"
           className="cursor-pointer animate-bounce"
         >
           <span className="text-4xl font-extrabold underline underline-offset-4">
