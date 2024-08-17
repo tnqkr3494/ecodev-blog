@@ -13,7 +13,7 @@ export default async function Posts({
   const data = await getData(id);
   const childPages = getChildPageDetails(data);
   return (
-    <div className="mt-32 pl-[144px] md:pl-[144px] mx-auto">
+    <div className="mt-32 md:pl-[144px] mx-auto">
       {childPages.length === 0 ? (
         <div className="ml-4">
           <div className="flex">

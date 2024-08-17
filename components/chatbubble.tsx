@@ -15,6 +15,7 @@ export default function ChatBubble() {
 
     observer.observe(ref.current);
   }, []);
+
   return (
     <div ref={ref} className="flex flex-col gap-4">
       <div
