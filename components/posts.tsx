@@ -29,7 +29,12 @@ export default async function Posts({
           <div className="flex flex-wrap">
             {childPages.map((page) => (
               <div key={page.id} className="w-full md:w-1/4 p-4">
-                <Link href={`/posts/category/front/${page.id}`}>
+                <Link
+                  href={{
+                    pathname: `/posts/category/front/${page.id}`,
+                    query: { title: page.title },
+                  }}
+                >
                   <Thumbnail
                     title={page.title}
                     createdAt={new Date(page.createdAt).toLocaleDateString()}
