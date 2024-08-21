@@ -4,15 +4,12 @@ import dynamic from "next/dynamic";
 import img from "next/image";
 import Link from "next/link";
 import { NotionRenderer } from "react-notion-x";
+import { Code } from "react-notion-x-code-block";
 
 interface RendererProps {
   recordMap: any; // 임의로 any
   rootPageId: string;
 }
-
-const Code = dynamic(() =>
-  import("react-notion-x/build/third-party/code").then((m) => m.Code)
-);
 
 const Collection = dynamic(() =>
   import("react-notion-x/build/third-party/collection").then(
