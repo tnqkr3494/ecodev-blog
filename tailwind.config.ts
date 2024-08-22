@@ -32,7 +32,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animated"), require("daisyui")],
+  plugins: [
+    require("tailwindcss-animated"),
+    require("daisyui"),
+    require("@tailwindcss/line-clamp"),
+  ],
 
   daisyui: {
     themes: [
