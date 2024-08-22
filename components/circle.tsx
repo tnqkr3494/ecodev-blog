@@ -11,7 +11,7 @@ export default function IconCirlce({ link, name }: ICircle) {
       className="bg-card p-2 rounded-md hover:scale-125 transition-transform tooltip"
       data-tip={name}
     >
-      <div className="w-14 h-14">
+      <div className="w-14 h-14 flex justify-center items-center">
         <Image
           src={link}
           alt="circle"
