@@ -15,6 +15,7 @@ export default function Header() {
             />
           </Link>
         </div>
+        {/* 모바일 메뉴 */}
         <ul className="md:hidden menu lg:menu-horizontal bg-base-100 rounded-box lg:mb-64 font-semibold">
           <li>
             <details>
@@ -26,37 +27,34 @@ export default function Header() {
                 <li>
                   <Link href="/project">Project</Link>
                 </li>
-                <li>
-                  <div className="dropdown dropdown-end">
-                    <summary tabIndex={0} className="m-1">
-                      Posts
-                    </summary>
-                    <ul
-                      tabIndex={0}
-                      className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
-                    >
-                      <li>
-                        <Link href="/posts/category/front">front</Link>
-                      </li>
-                      <li>
-                        <Link href="/posts/category/back">back</Link>
-                      </li>
-                      <li>
-                        <Link href="/posts/category/algorithm">algorithm</Link>
-                      </li>
-                      <li>
-                        <Link href="/posts/category/cs">cs</Link>
-                      </li>
-                      <li>
-                        <Link href="/posts/category/etc">etc</Link>
-                      </li>
-                    </ul>
-                  </div>
+                <li className="dropdown dropdown-end w-full">
+                  <summary tabIndex={0}>Posts</summary>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                  >
+                    <li>
+                      <Link href="/posts/category/front">front</Link>
+                    </li>
+                    <li>
+                      <Link href="/posts/category/back">back</Link>
+                    </li>
+                    <li>
+                      <Link href="/posts/category/algorithm">algorithm</Link>
+                    </li>
+                    <li>
+                      <Link href="/posts/category/cs">cs</Link>
+                    </li>
+                    <li>
+                      <Link href="/posts/category/etc">etc</Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </details>
           </li>
         </ul>
+        {/* PC 메뉴 */}
         <div className="hidden md:flex md:items-center md:space-x-4">
           <ul className="menu menu-horizontal px-1 font-semibold">
             <li>
@@ -76,13 +74,13 @@ export default function Header() {
                     <Link href="/posts/category/back">back</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/cs">CS</Link>
+                    <Link href="/posts/category/cs">cs</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/algorithm">Algorithm</Link>
+                    <Link href="/posts/category/algorithm">algorithm</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/etc">ETC</Link>
+                    <Link href="/posts/category/etc">etc</Link>
                   </li>
                 </ul>
               </details>
