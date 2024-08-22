@@ -8,7 +8,6 @@ import {
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Computer } from "../computer";
-import Life from "@/components/lifetime";
 import Link from "next/link";
 import IconCirlce from "@/components/circle";
 import ChatBubble from "@/components/chatbubble";
@@ -17,11 +16,11 @@ import Image from "next/image";
 export default function AboutMe() {
   return (
     <>
-      <div id="about" className="pt-40 px-4 md:px-20 w-full">
-        <h1 className="text-4xl md:text-6xl mb-4 md:mb-20 font-extrabold md:text-start text-center">
+      <div id="about" className="pt-56 px-4 md:px-20 w-full">
+        <h1 className="text-4xl md:text-6xl mb-4 md:mb-20 font-extrabold text-center">
           About Me
         </h1>
-        <section className="flex flex-col md:flex-row items-center">
+        <section className="flex flex-col md:flex-row items-center justify-center">
           <div className="max-w-4xl flex flex-col md:flex-row items-center md:items-start">
             <div className="flex flex-col items-center border-r-0 mb-8 md:mb-0 md:pr-12 md:border-r-2">
               <div className="w-32 h-32 md:w-48 md:h-48 rounded-full flex justify-center items-center">
