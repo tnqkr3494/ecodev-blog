@@ -11,21 +11,30 @@ interface IProjectSection {
   imgSrc: string;
   codeSrc: string;
   detailSrc: string;
+  startDate: string;
+  endDate: string;
+  act: string;
   title: string;
   description?: string;
-  skills: string[];
+  language: string[];
+  library: string[];
 }
 
 export default function ProjectSection({
   reversed = false,
   imgSrc,
   codeSrc,
-  title,
   detailSrc,
+  startDate,
+  endDate,
+  act,
+  title,
   description = "dd",
-  skills,
+  language,
+  library,
 }: IProjectSection) {
   const [intersect, setIntersect] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -41,7 +50,7 @@ export default function ProjectSection({
   }, []);
 
   return (
-    <section
+    <div
       ref={ref}
       className={cls(
         "relative flex flex-col md:flex-row items-center gap-8 md:gap-16",
@@ -53,7 +62,12 @@ export default function ProjectSection({
           : ""
       )}
     >
-      <div className="w-full md:w-[45rem] shadow-xl relative">
+      <div
+        className="w-full md:w-[45rem] shadow-xl relative cursor-pointer"
+        onClick={() => window.open(detailSrc)}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         <article>
           <div className="w-full rounded-lg">
             <Image
@@ -66,35 +80,73 @@ export default function ProjectSection({
             />
           </div>
         </article>
+        <div
+          className={cls(
+            "absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg transition-opacity duration-300",
+            hovered ? "opacity-100" : "opacity-0"
+          )}
+        >
+          <p
+            className={cls(
+              "font-semibold text-white text-lg transform transition-transform duration-300",
+              hovered ? "translate-y-0" : "translate-y-4"
+            )}
+          >
+            클릭시 상세 링크로 이동합니다
+          </p>
+        </div>
       </div>
       <div
         className={cls(
-          "bg-base-300 bg-opacity-70 max-w-full md:max-w-lg p-5 rounded-lg flex flex-col gap-3",
+          "max-w-full md:max-w-2xl p-5 rounded-lg flex flex-col gap-3",
           reversed ? "md:right-1/3" : "md:left-1/3"
         )}
       >
-        <h2 className="font-extrabold text-2xl md:text-3xl text-title">
+        <h1 className="font-extrabold text-2xl md:text-3xl text-title">
           {title}
+        </h1>
+        <h2 className="text-gray-400">
+          {startDate} ~ {endDate}
         </h2>
-        <h3 className="font-semibold text-lg md:text-xl">
-          Using :
-          {skills.map((skill, index) => (
-            <span key={index} className="ml-2">
-              {skill} /
-            </span>
-          ))}
-          <span className="ml-2">and more...</span>
+        <p>
+          <span className="font-semibold text-lg">✔ 주요기능</span>
+          <br />
+          {act}
+        </p>
+        <p>
+          <span className="font-semibold text-lg">✔ 회고</span>
+          <br />
+          {description}
+        </p>
+        <hr />
+        <h3>
+          📍언어 및 프레임워크 :
+          {language.map((lan, index) => {
+            return (
+              <span key={index}>
+                {index >= language.length - 1 ? ` ${lan}` : ` ${lan},`}
+              </span>
+            );
+          })}
         </h3>
-        <p className="text-sm md:text-base">{description}</p>
-        <div className="flex flex-row gap-3">
-          <Link href={detailSrc} target="_blank">
-            <button className="btn btn-outline">Go To Detail</button>
+        <h3>
+          📍라이브러리 및 패키지 :
+          {library.map((lib, index) => {
+            return (
+              <span key={index}>
+                {" "}
+                {index >= library.length - 1 ? ` ${lib}` : ` ${lib},`}
+              </span>
+            );
+          })}
+        </h3>
+        <h3>
+          📍github :{" "}
+          <Link href={codeSrc} className="underline" target="_blank">
+            {codeSrc}
           </Link>
-          <Link href={codeSrc} target="_blank">
-            <button className="btn btn-outline">Code</button>
-          </Link>
-        </div>
+        </h3>
       </div>
-    </section>
+    </div>
   );
 }

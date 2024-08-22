@@ -9,13 +9,11 @@ export default function Project() {
         imgSrc="/diabetes.png"
         codeSrc="https://github.com/likelion-onetool/diabetes-frontend"
         detailSrc="https://jelly-textbook-0b1.notion.site/9137b6d344f4417580624e5788da118b"
-        skills={[
-          "React",
-          "TypeScript",
-          "styled-component",
-          "react-router",
-          "react-query",
-        ]}
+        startDate="2024.07.01"
+        endDate="2024.08.07"
+        act="회원가입"
+        language={["React", "TypeScript"]}
+        library={["styled-component", "react-router", "react-query"]}
         description="멋대 12기 중앙 해커톤 주제로 팀을 꾸려 나간 프로젝트. 
         당뇨병 환자들을 위한 건강도시락 판매 사이트를 제작하였다. 중간에 서버가 다운되고,
         백엔드와의 연결할 때 cors문제, api에서 문제들이 생겨서 고전하였지만 팀원들이 서로 포기하지 않고
@@ -27,14 +25,12 @@ export default function Project() {
         imgSrc="/hackerton.png"
         codeSrc="https://github.com/bagle-ggul/bagleFront"
         detailSrc="https://jelly-textbook-0b1.notion.site/PROJECT-1ce5beaadbb449269210fd41de5c4272"
+        startDate="2024.05.17"
+        endDate="2024.05.18"
+        act="회원가입"
         reversed={true}
-        skills={[
-          "react",
-          "JavaScript",
-          "styled-component",
-          "recoil",
-          "react-router",
-        ]}
+        language={["react", "JavaScript"]}
+        library={["styled-component", "recoil", "react-router"]}
         description="세종대학교 소프트웨어융합대학 주관 해커톤에서 우리팀이 선정한 프로젝트.
         *미연시 즉 미소녀 연애 시뮬레이션을 주제로 게임을 플레이할 수 있는 사이트를 제작하였다.
         하루만에 완성해야되는 프로젝트였고, 주제가 게임이다 보니 로직이 굉장히 복잡해져서 버그를
@@ -46,7 +42,11 @@ export default function Project() {
         imgSrc="/blog.png"
         codeSrc="https://github.com/tnqkr3494/ecodev-blog"
         detailSrc="https://jelly-textbook-0b1.notion.site/62e747a4ad1846a8ac4e2f87ad60f1e4"
-        skills={["NextJS", "TypeScript", "tailwind", "DaisyUI", "vercel"]}
+        startDate="2024"
+        endDate="2024"
+        act="블로그"
+        language={["NextJS", "TypeScript"]}
+        library={["tailwind", "DaisyUI", "vercel"]}
         description="velog, tistory와 같은 블로그를 제작할 수 있는 사이트는 여럿 있지만 
         커스터마이징하는 부분에서 한계를 느꼈고, 또한 내가 그동안 공부했던 기술들을 이용해서 나의
         상상력을 펼칠 수 있는 기회를 만들고 싶어서 이 프로젝트를 기획했다.
@@ -57,8 +57,12 @@ export default function Project() {
         imgSrc="/nostalgia.png"
         codeSrc="https://github.com/tnqkr3494/db_course"
         detailSrc="https://jelly-textbook-0b1.notion.site/Nostalgia-Films-11799c9ad9524cca88a68fedd580f653"
+        startDate="2024.05.22"
+        endDate="2024.05.31"
+        act="회원가입"
         reversed={true}
-        skills={["React", "TypeScript", "Express", "MSSQL"]}
+        language={["React", "TypeScript", "MSSQL"]}
+        library={["Express"]}
         description="학교 데이터베이스 과목 수업에서 SQL을 이용한 프로젝트를 구상했었다.
         그 과정에서 SQL 쿼리문을 만드는데 그치지 않고, 나의 전공인 프론트엔드를 살려서 그대로
         express를 이용해서 프론트와 db를 연결시켰다. 사이트의 기능 및 내용은 고전 명화들의 정보를 볼 수 있고,
