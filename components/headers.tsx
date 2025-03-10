@@ -34,19 +34,19 @@ export default function Header() {
                     className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
                   >
                     <li>
-                      <Link href="/posts/category/front">front</Link>
+                      <Link href="/posts/front">front</Link>
                     </li>
                     <li>
-                      <Link href="/posts/category/back">back</Link>
+                      <Link href="/posts/back">back</Link>
                     </li>
                     <li>
-                      <Link href="/posts/category/algorithm">algorithm</Link>
+                      <Link href="/posts/algorithm">algorithm</Link>
                     </li>
                     <li>
-                      <Link href="/posts/category/cs">cs</Link>
+                      <Link href="/posts/cs">cs</Link>
                     </li>
                     <li>
-                      <Link href="/posts/category/etc">etc</Link>
+                      <Link href="/posts/etc">etc</Link>
                     </li>
                   </ul>
                 </li>
@@ -68,19 +68,19 @@ export default function Header() {
                 <summary>Posts</summary>
                 <ul className="p-2 bg-base-100 rounded-t-none">
                   <li>
-                    <Link href="/posts/category/front">front</Link>
+                    <Link href="/posts/front">front</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/back">back</Link>
+                    <Link href="/posts/back">back</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/cs">cs</Link>
+                    <Link href="/posts/cs">cs</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/algorithm">algorithm</Link>
+                    <Link href="/posts/algorithm">algorithm</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/etc">etc</Link>
+                    <Link href="/posts/etc">etc</Link>
                   </li>
                 </ul>
               </details>

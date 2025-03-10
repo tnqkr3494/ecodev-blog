@@ -14,8 +14,8 @@ export default function PostsLayout({
 }) {
   return (
     <>
-      <Sidebar />
       {children}
+      <Sidebar />
     </>
   );
 }
