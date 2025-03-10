@@ -14,7 +14,7 @@ export default async function Posts({
   const childPages = getChildPageDetails(data);
 
   return (
-    <div className="mt-32 mx-32">
+    <div className="mt-32 mx-12">
       {childPages.length === 0 ? (
         <div>
           <div className="flex gap-8 justify-center">

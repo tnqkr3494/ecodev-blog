@@ -18,7 +18,7 @@ export default function Thumbnail({
         alt={title}
         className="w-full h-64 object-cover object-center pb-6"
       />
-      <div className="p-4 flex-1 flex flex-col justify-between">
+      <div className="pb-4 flex-1 flex flex-col justify-between">
         <h3 className="font-semibold text-lg text-title line-clamp-2">
           {title}
         </h3>
