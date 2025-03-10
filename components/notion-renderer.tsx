@@ -19,13 +19,14 @@ const Collection = dynamic(() =>
 
 export const Renderer = ({ recordMap, rootPageId }: RendererProps) => {
   return (
-    <div className="border-b-2">
+    <div>
       <NotionRenderer
         recordMap={recordMap}
         darkMode={true}
         rootPageId={rootPageId}
         fullPage={true}
         previewImages
+        showTableOfContents={true}
         components={{
           Code,
           nextImage: img,

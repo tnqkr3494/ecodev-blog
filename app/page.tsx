@@ -35,7 +35,7 @@ export default function Home() {
                 About Me
               </button>
             </Link>
-            <Link href="/posts/category/front">
+            <Link href="/posts/front">
               <button className="btn btn-home border-2 text-xl px-6 py-3 rounded-full transition-all duration-300">
                 Read Posts
               </button>

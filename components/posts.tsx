@@ -31,7 +31,7 @@ export default async function Posts({
               <div key={page.id} className="w-full md:w-1/4 p-4">
                 <Link
                   href={{
-                    pathname: `/posts/category/front/${page.id}`,
+                    pathname: `/posts/front/${page.id}`,
                     query: { title: page.title },
                   }}
                 >
