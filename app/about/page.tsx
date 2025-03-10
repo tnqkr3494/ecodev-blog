@@ -21,7 +21,7 @@ export default function AboutMe() {
           About Me
         </h1>
         <section className="flex flex-col md:flex-row items-center justify-center">
-          <div className="max-w-4xl flex flex-col md:flex-row items-center md:items-start">
+          <div className="max-w-4xl flex flex-col md:flex-row items-center">
             <div className="flex flex-col items-center border-r-0 mb-8 md:mb-0 md:pr-12 md:border-r-2">
               <div className="w-32 h-32 md:w-48 md:h-48 rounded-full flex justify-center items-center">
                 <Image

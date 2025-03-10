@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center text-2xl fixed top-0 w-full md:px-20 px-4 py-3 z-50  bg-base-100 border-b-[1px] shadow-md">
+    <header className="flex justify-between items-center text-2xl fixed top-0 w-full md:px-20 px-4 py-3 z-50 bg-transparent backdrop-blur-sm">
       <div className="navbar">
         <div className="flex-1">
           <Link href="/" className="btn btn-ghost bg-white">
@@ -34,19 +34,19 @@ export default function Header() {
                     className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
                   >
                     <li>
-                      <Link href="/posts/category/front">front</Link>
+                      <Link href="/posts/front">front</Link>
                     </li>
                     <li>
-                      <Link href="/posts/category/back">back</Link>
+                      <Link href="/posts/back">back</Link>
                     </li>
                     <li>
-                      <Link href="/posts/category/algorithm">algorithm</Link>
+                      <Link href="/posts/algorithm">algorithm</Link>
                     </li>
                     <li>
-                      <Link href="/posts/category/cs">cs</Link>
+                      <Link href="/posts/cs">cs</Link>
                     </li>
                     <li>
-                      <Link href="/posts/category/etc">etc</Link>
+                      <Link href="/posts/etc">etc</Link>
                     </li>
                   </ul>
                 </li>
@@ -68,19 +68,19 @@ export default function Header() {
                 <summary>Posts</summary>
                 <ul className="p-2 bg-base-100 rounded-t-none">
                   <li>
-                    <Link href="/posts/category/front">front</Link>
+                    <Link href="/posts/front">front</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/back">back</Link>
+                    <Link href="/posts/back">back</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/cs">cs</Link>
+                    <Link href="/posts/cs">cs</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/algorithm">algorithm</Link>
+                    <Link href="/posts/algorithm">algorithm</Link>
                   </li>
                   <li>
-                    <Link href="/posts/category/etc">etc</Link>
+                    <Link href="/posts/etc">etc</Link>
                   </li>
                 </ul>
               </details>

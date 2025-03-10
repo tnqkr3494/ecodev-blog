@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Nanum_Gothic } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import Header from "@/components/headers";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
