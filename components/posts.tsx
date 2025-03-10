@@ -14,19 +14,23 @@ export default async function Posts({
   const childPages = getChildPageDetails(data);
 
   return (
-    <div className="mt-32 mx-auto">
+    <div className="mt-32 mx-32">
       {childPages.length === 0 ? (
-        <div className="ml-4">
-          <div className="flex">
-            <h1 className="font-extrabold text-5xl text-title">{title}</h1>
+        <div>
+          <div className="flex gap-8 justify-center">
+            <h1 className="font-extrabold text-3xl text-title ml-4 my-8">
+              {title} 포스트
+            </h1>
           </div>
-          <p className="mt-8 font-semibold">포스트가 비었습니다.</p>
+          <p className="text-center font-semibold ml-4">
+            포스트가 비어있습니다.
+          </p>
         </div>
       ) : (
         <>
-          <div className="flex gap-8">
+          <div className="flex gap-8 justify-center">
             <h1 className="font-extrabold text-3xl text-title ml-4 my-8">
-              포스트: {title}
+              {title} 포스트
             </h1>
           </div>
           <div className="flex flex-wrap">
