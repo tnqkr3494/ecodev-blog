@@ -425,4 +425,11 @@ hr {
 
 .notion-aside-table-of-contents {
   background: transparent !important;
+  max-width: 222px;
+}
+
+.notion-table-of-contents-item-body {
+  white-space: pre-line !important;
+  word-wrap: break-word !important;
+  line-height: 1.6;
 }
