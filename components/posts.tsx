@@ -12,8 +12,9 @@ export default async function Posts({
 }) {
   const data = await getData(id);
   const childPages = getChildPageDetails(data);
+
   return (
-    <div className="mt-32 md:pl-[144px] mx-auto">
+    <div className="mt-32 mx-auto">
       {childPages.length === 0 ? (
         <div className="ml-4">
           <div className="flex">
@@ -24,15 +25,16 @@ export default async function Posts({
       ) : (
         <>
           <div className="flex gap-8">
-            <h1 className="font-extrabold text-5xl text-title ml-4">{title}</h1>
+            <h1 className="font-extrabold text-3xl text-title ml-4 my-8">
+              포스트: {title}
+            </h1>
           </div>
           <div className="flex flex-wrap">
             {childPages.map((page) => (
               <div key={page.id} className="w-full md:w-1/4 p-4">
                 <Link
                   href={{
-                    pathname: `/posts/front/${page.id}`,
-                    query: { title: page.title },
+                    pathname: `/posts/${page.id}`,
                   }}
                 >
                   <Thumbnail
