@@ -1,12 +1,5 @@
-import { MetadataRoute } from 'next'
- 
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      crawlDelay: 10,
-    },
-    sitemap: 'https://ecodev-blog.vercel.app/sitemap.xml',
-  }
-}
+User-agent: *
+Allow: /
+Crawl-delay: 10
+
+Sitemap: https://ecodev-blog.vercel.app/sitemap.xml
