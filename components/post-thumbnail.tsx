@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface IThumbnailProps {
   title: string;
   createdAt: string;
@@ -13,10 +15,12 @@ export default function Thumbnail({
 }: IThumbnailProps) {
   return (
     <div className="rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform ease-in-out flex flex-col h-full">
-      <img
+      <Image
         src={thumbnailImg}
         alt={title}
         className="w-full h-64 object-cover object-center pb-6"
+        width={500}
+        height={500}
       />
       <div className="pb-4 flex-1 flex flex-col justify-between">
         <h3 className="font-semibold text-lg text-title line-clamp-2">
