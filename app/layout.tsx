@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://ecodev-blog.vercel.app",
     locale: "ko_KR",
-    siteName: "강인권블로그",
+    siteName: "EcoDev's Blog",
   },
   authors: [{ name: "EcoDev" }, { name: "InGwonKang" }],
   creator: "InGwonKang",
   publisher: "InGwonKang",
   icons: {
-    icon: "/icon.png",
+    icon: "/favicon.ico",
   },
   verification: {
     google: "aTX94OK9WyJZPe_8rc-dXFSUaLpVDbqGW2ytGcBOubE",
