@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { fetchContributions } from "@jonasdoesthings/github-contributions";
 
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME as string;
-const GITHUB_GRAPHQL_API = "https://api.github.com/graphql";
 
 async function sendEmailAlert(hasCommit: boolean) {
   const transporter = nodemailer.createTransport({
@@ -94,60 +94,24 @@ async function sendEmailAlert(hasCommit: boolean) {
 export async function GET() {
   const today = new Date().toISOString().split("T")[0];
 
-  const query = {
-    query: `
-      {
-        user(login: "${GITHUB_USERNAME}") {
-          contributionsCollection {
-            contributionCalendar {
-              weeks {
-                contributionDays {
-                  date
-                  contributionCount
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-  };
+  const contributionsYear = await fetchContributions(GITHUB_USERNAME);
 
-  const response = await fetch(GITHUB_GRAPHQL_API, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(query),
-  });
-
-  if (!response.ok) {
-    return NextResponse.json(
-      { message: "GitHub API 요청 실패" },
-      { status: 500 }
-    );
-  }
-
-  const data = await response.json();
-  const contributionDays =
-    data.data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
-      (week: any) => week.contributionDays
-    );
-
-  const todayContributions = contributionDays.find(
-    (day: any) => day.date === today
+  const todayContributions = contributionsYear.contributions.find(
+    (day) => day.date === today
   );
 
-  const hasCommit =
-    todayContributions && todayContributions.contributionCount > 0;
+  const hasCommit = todayContributions
+    ? todayContributions.numberOfContributions > 0
+    : false;
 
   await sendEmailAlert(hasCommit);
 
-  return NextResponse.json({
+  const result = NextResponse.json({
     today,
-    contributions: todayContributions
-      ? todayContributions.contributionCount
-      : 0,
+    contributions: hasCommit ? todayContributions?.numberOfContributions : 0,
   });
+
+  result.headers.set("Cache-Control", "no-store");
+
+  return result;
 }
