@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/check-contributions",
-      "schedule": "10 13 * * *"
+      "schedule": "10 15 * * *"
     }
   ]
 }
