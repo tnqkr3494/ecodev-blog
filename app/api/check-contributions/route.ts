@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { fetchContributions } from "@jonasdoesthings/github-contributions";
 
+export const dynamic = "force-dynamic";
+
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME as string;
 
 async function sendEmailAlert(hasCommit: boolean) {
@@ -106,12 +108,8 @@ export async function GET() {
 
   await sendEmailAlert(hasCommit);
 
-  const result = NextResponse.json({
+  return NextResponse.json({
     today,
     contributions: hasCommit ? todayContributions?.numberOfContributions : 0,
   });
-
-  result.headers.set("Cache-Control", "no-store");
-
-  return result;
 }
