@@ -2,45 +2,44 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { fetchContributions } from "@jonasdoesthings/github-contributions";
 
-export const dynamic = "force-dynamic";
-
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME as string;
 
 async function sendEmailAlert(hasCommit: boolean) {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
+      },
+    });
 
-  const subject = hasCommit
-    ? "오늘도 커밋 완료! 💪"
-    : "오늘 커밋 안 하셨나요? 🚀";
+    const subject = hasCommit
+      ? "오늘도 커밋 완료! 💪"
+      : "오늘 커밋 안 하셨나요? 🚀";
 
-  const message = hasCommit
-    ? `
+    const message = hasCommit
+      ? `
         <p style="font-size: 16px; color: #555; margin-bottom: 20px;">
             오늘도 GitHub Contributions에 커밋을 남기셨네요!<br/>
             잔디가 자라고 있습니다. 🌱
         </p>
       `
-    : `
+      : `
         <p style="font-size: 16px; color: #555; margin-bottom: 20px;">
             GitHub Contributions에 오늘 커밋 기록이 없습니다!<br/>
             잔디를 심어주세요. 🌱
         </p>
       `;
-  const imageURL = hasCommit
-    ? process.env.SUCCESS_IMG_URL
-    : process.env.FAIL_IMG_URL;
+    const imageURL = hasCommit
+      ? process.env.SUCCESS_IMG_URL
+      : process.env.FAIL_IMG_URL;
 
-  const mailOptions = {
-    from: "Commit Reminder <no-reply@ecodev-blog.vercel.app>",
-    to: "tnqkr3494@naver.com",
-    subject,
-    html: `
+    const mailOptions = {
+      from: "Commit Reminder <no-reply@ecodev-blog.vercel.app>",
+      to: "tnqkr3494@naver.com",
+      subject,
+      html: `
       <div style="
           font-family: Arial, sans-serif; 
           padding: 20px; 
@@ -88,28 +87,35 @@ async function sendEmailAlert(hasCommit: boolean) {
           </p>
       </div>
         `,
-  };
+    };
 
-  await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions);
+  } catch (error) {
+    console.error("Error Sending Email");
+    throw error;
+  }
 }
 
 export async function GET() {
-  const today = new Date().toISOString().split("T")[0];
+  try {
+    const today = new Date().toISOString().split("T")[0];
+    const contributionsYear = await fetchContributions(GITHUB_USERNAME);
+    const todayContributions = contributionsYear.contributions.find(
+      (day) => day.date === today
+    );
+    const hasCommit = todayContributions
+      ? todayContributions.numberOfContributions > 0
+      : false;
 
-  const contributionsYear = await fetchContributions(GITHUB_USERNAME);
+    // sendEmailAlert가 완료될 때까지 기다림
+    await sendEmailAlert(hasCommit);
 
-  const todayContributions = contributionsYear.contributions.find(
-    (day) => day.date === today
-  );
-
-  const hasCommit = todayContributions
-    ? todayContributions.numberOfContributions > 0
-    : false;
-
-  await sendEmailAlert(hasCommit);
-
-  return NextResponse.json({
-    today,
-    contributions: hasCommit ? todayContributions?.numberOfContributions : 0,
-  });
+    return NextResponse.json({
+      today,
+      contributions: hasCommit ? todayContributions?.numberOfContributions : 0,
+    });
+  } catch (error: any) {
+    console.error("Error in GET function:", error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
 }
