@@ -47,7 +47,11 @@ NextJS14버전을 학습하면서 배운 내용을 직접적으로 사용해보�
 - [Node](https://nodejs.org/) 21.7.1
 - [NextJS](https://nextjs.org/) 14.1.3
 - [react-notion-x](https://github.com/NotionX/react-notion-x) 6.16.0
-- etc
+- Typescript
+- giscus
+- Tailwind CSS + Daisy UI
+
+![alt text](/public/architecture.png)
 
 # [2] Getting Started
 
