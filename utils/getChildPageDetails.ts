@@ -18,8 +18,7 @@ export default function getChildPageDetails(recordMap: any) {
     return [];
   }
 
-  const collection =
-    collectionMap["801956a9-4bd1-44a0-8dab-8353292973ca"]?.value;
+  const collection = collectionMap[Object.keys(collectionMap)[0]]?.value;
   if (!collection) {
     console.warn("⚠️ 해당 컬렉션 ID에 대한 데이터가 없습니다.");
     return [];

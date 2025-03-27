@@ -27,9 +27,12 @@ export default function PostsClient({
   const filteredPages = selectedCategory
     ? selectedCategory === "etc"
       ? childPages.filter((page) => !page.tags || page.tags.length === 0)
-      : childPages.filter((page) => page.tags?.includes(selectedCategory))
+      : childPages.filter((page) =>
+          page.tags && page.tags.length > 0
+            ? page.tags[0].split(",").includes(selectedCategory)
+            : false
+        )
     : childPages;
-
   return (
     <main className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-28">
       <div className="lg:flex lg:gap-8">
