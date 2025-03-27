@@ -18,11 +18,11 @@ export default function Thumbnail({
       <Image
         src={thumbnailImg}
         alt={title}
-        className="w-full h-64 object-cover object-center pb-6"
+        className="w-full h-64 object-cover object-center"
         width={500}
         height={500}
       />
-      <div className="pb-4 flex-1 flex flex-col justify-between">
+      <div className="p-4 flex-1 flex flex-col justify-between">
         <h3 className="font-semibold text-lg text-title line-clamp-2">
           {title}
         </h3>
