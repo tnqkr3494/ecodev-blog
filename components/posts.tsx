@@ -18,7 +18,7 @@ export default async function Posts({
     if (!e.tags || e.tags.length === 0) {
       categories["etc"] = (categories["etc"] || 0) + 1;
     } else {
-      for (const k of e.tags) {
+      for (const k of e.tags[0].split(",")) {
         categories[k] = (categories[k] || 0) + 1;
       }
     }
