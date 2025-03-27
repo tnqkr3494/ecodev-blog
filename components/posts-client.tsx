@@ -34,9 +34,9 @@ export default function PostsClient({
         )
     : childPages;
   return (
-    <main className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-28">
+    <main className="max-w-8xl px-20 py-8 mt-28">
       <div className="lg:flex lg:gap-8">
-        <div className="lg:w-3/4">
+        <div className="lg:w-4/5">
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-title mb-8">
               {title} 포스트
@@ -68,11 +68,9 @@ export default function PostsClient({
           </div>
         </div>
 
-        <div className="lg:w-1/4 mt-8 lg:mt-0">
+        <div className="lg:w-1/5 mt-8 lg:mt-0">
           <div className="bg-white rounded-lg shadow p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
-              카테고리
-            </h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">태그</h2>
             <ul className="space-y-3">
               {Object.entries(categories).map(([name, count]) => (
                 <li key={name}>
