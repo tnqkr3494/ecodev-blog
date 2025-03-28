@@ -86,7 +86,7 @@ export default function PostsClient({
                         : ""
                     }`}
                   >
-                    <span>{name}</span>
+                    <span>#{name}</span>
                     <span className="bg-gray-100 text-gray-600 text-xs font-medium px-2.5 py-0.5 rounded">
                       {count}
                     </span>
