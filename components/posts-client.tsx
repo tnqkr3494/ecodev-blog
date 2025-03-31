@@ -138,7 +138,10 @@ export default function PostsClient({
 
             {selectedCategory && (
               <button
-                onClick={() => setSelectedCategory(null)}
+                onClick={() => {
+                  setSelectedCategory(null);
+                  router.push(`?page=1`);
+                }}
                 className="mt-4 w-full bg-gray-200 text-gray-800 py-1.5 rounded-md hover:bg-gray-300"
               >
                 전체 보기
