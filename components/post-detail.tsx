@@ -1,6 +1,7 @@
 import Renderer from "@/components/notion-renderer";
 import { getData } from "@/utils/notion";
-import "prismjs/themes/prism.css";
+
+import "@/styles/prism-theme.css";
 import GiscusComments from "@/components/giscus";
 
 export default async function PostDetail({ id }: { id: string }) {
