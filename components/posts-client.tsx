@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Thumbnail from "./post-thumbnail";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface Post {
   id: string;
@@ -23,6 +24,13 @@ export default function PostsClient({
   categories: Record<string, number>;
 }) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [page, setPage] = useState<number>(1);
+  const router = useRouter();
+
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    setPage(Number(searchParams.get("page")) || 1);
+  }, [searchParams]);
 
   const filteredPages = selectedCategory
     ? selectedCategory === "etc"
@@ -33,6 +41,23 @@ export default function PostsClient({
             : false
         )
     : childPages;
+
+  const paginationedChildPages = filteredPages.slice(9 * (page - 1), 9 * page);
+
+  const handlePaginationClick = (direction: string) => {
+    if (direction === "prev") {
+      if (page === 1) {
+        return;
+      }
+      router.push(`?page=${page - 1}`);
+    } else {
+      if (page === Math.ceil(filteredPages.length / 9)) {
+        return;
+      }
+      router.push(`?page=${page + 1}`);
+    }
+  };
+
   return (
     <main className="max-w-8xl px-20 py-8 mt-28">
       <div className="lg:flex lg:gap-8">
@@ -41,13 +66,13 @@ export default function PostsClient({
             <h1 className="text-2xl font-bold text-title mb-8">
               {title} 포스트
             </h1>
-            {filteredPages.length === 0 ? (
+            {paginationedChildPages.length === 0 ? (
               <p className="text-center font-semibold mt-4">
                 포스트가 비어있습니다.
               </p>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredPages.map((page) => (
+                {paginationedChildPages.map((page) => (
                   <article key={page.id}>
                     <Link href={`/posts/${page.id}`}>
                       <Thumbnail
@@ -66,6 +91,21 @@ export default function PostsClient({
               </div>
             )}
           </div>
+          <div className="join">
+            <button
+              className="join-item btn"
+              onClick={() => handlePaginationClick("prev")}
+            >
+              «
+            </button>
+            <button className="join-item btn">Page {page}</button>
+            <button
+              className="join-item btn"
+              onClick={() => handlePaginationClick("next")}
+            >
+              »
+            </button>
+          </div>
         </div>
 
         <div className="lg:w-1/5 mt-8 lg:mt-0">
@@ -75,11 +115,12 @@ export default function PostsClient({
               {Object.entries(categories).map(([name, count]) => (
                 <li key={name}>
                   <button
-                    onClick={() =>
+                    onClick={() => {
                       setSelectedCategory(
                         name === selectedCategory ? null : name
-                      )
-                    }
+                      );
+                      router.push(`?page=1`);
+                    }}
                     className={`flex items-center justify-between w-full text-gray-600 hover:text-custom px-2 py-1 rounded-md ${
                       selectedCategory === name
                         ? "bg-blue-100 text-blue-600"
