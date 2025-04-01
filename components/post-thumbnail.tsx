@@ -16,7 +16,11 @@ export default function Thumbnail({
   return (
     <div className="rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform ease-in-out flex flex-col h-full">
       <Image
-        src={thumbnailImg}
+        src={
+          thumbnailImg
+            ? thumbnailImg
+            : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png"
+        }
         alt={title}
         className="w-full h-64 object-cover object-center"
         width={500}
