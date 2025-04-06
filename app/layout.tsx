@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
-import { Nanum_Gothic } from "next/font/google";
 import "@/app/globals.css";
+import localFont from "next/font/local";
 import Header from "@/components/headers";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
-const nanum = Nanum_Gothic({
-  weight: ["400", "700", "800"],
-  subsets: ["latin"],
+const gmarketFont = localFont({
+  src: [
+    {
+      path: "../public/GmarketSansTTFLight.woff2",
+      weight: "300",
+    },
+    {
+      path: "../public/GmarketSansTTFMedium.woff2",
+      weight: "500",
+    },
+    {
+      path: "../public/GmarketSansTTFBold.woff2",
+      weight: "700",
+    },
+  ],
+  variable: "--font-gmarket",
 });
 
 export const metadata: Metadata = {
@@ -51,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="halloween">
-      <body className={`${nanum.className}`}>
+      <body className={`${gmarketFont.className}`}>
         <Header />
         {children}
         <Analytics />

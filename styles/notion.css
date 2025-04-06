@@ -7,6 +7,10 @@
  * places to add some flare.
  */
 
+:root {
+  --notion-font: var(--font-gmarket) !important;
+}
+
 hr {
   border: none;
   height: 1.5px !important;
@@ -17,6 +21,10 @@ hr {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
   color: inherit !important;
+}
+
+.notion b {
+  font-weight: 800 !important;
 }
 
 .notion-app {
