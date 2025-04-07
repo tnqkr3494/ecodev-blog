@@ -9,6 +9,7 @@
 
 :root {
   --notion-font: var(--font-gmarket) !important;
+  --notion-max-width: 720px;
 }
 
 hr {
@@ -442,4 +443,10 @@ hr {
   word-wrap: break-word !important;
   line-height: 1.6;
   font-size: 0.8rem;
+}
+
+@media (min-width: 1300px) and (min-height: 300px) {
+  .notion-page-content-has-aside .notion-page-content-inner {
+    max-width: 688px !important;
+  }
 }
