@@ -429,6 +429,7 @@ hr {
 
 .notion-aside {
   z-index: 1 !important;
+  font-size: 0.9rem;
 }
 
 .notion-aside-table-of-contents {
@@ -440,4 +441,5 @@ hr {
   white-space: pre-line !important;
   word-wrap: break-word !important;
   line-height: 1.6;
+  font-size: 0.8rem;
 }
