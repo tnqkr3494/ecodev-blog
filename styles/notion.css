@@ -435,14 +435,18 @@ hr {
 
 .notion-aside-table-of-contents {
   background: transparent !important;
-  max-width: 222px;
+  min-width: 150px !important;
+}
+
+.notion-aside-table-of-contents-header {
+  display: none;
 }
 
 .notion-table-of-contents-item-body {
   white-space: pre-line !important;
   word-wrap: break-word !important;
   line-height: 1.6;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 1300px) and (min-height: 300px) {
