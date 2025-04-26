@@ -436,21 +436,34 @@ hr {
 .notion-aside-table-of-contents {
   background: transparent !important;
   min-width: 150px !important;
+  max-width: 222px;
 }
 
 .notion-aside-table-of-contents-header {
   display: none;
 }
 
+.notion-table-of-contents-item {
+  color: inherit !important;
+}
+
 .notion-table-of-contents-item-body {
   white-space: pre-line !important;
   word-wrap: break-word !important;
   line-height: 1.6;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 1300px) and (min-height: 300px) {
   .notion-page-content-has-aside .notion-page-content-inner {
     max-width: 688px !important;
   }
+}
+
+.notion-bookmark > div {
+  color: inherit !important;
+}
+
+.notion-bookmark-link-text {
+  color: inherit !important;
 }
